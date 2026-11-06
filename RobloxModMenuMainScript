@@ -7,11 +7,14 @@
  Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
 ]=]
 
--- Instances: 39 | Scripts: 8 | Modules: 0 | Tags: 0
+-- Instances: 98 | Scripts: 18 | Modules: 1 | Tags: 0
 local G2L = {};
 
--- StarterGui.ModMenu
+-- ServerStorage.ModMenu
 G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["IgnoreGuiInset"] = true;
+G2L["1"]["DisplayOrder"] = 2147483647;
+G2L["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets;
 G2L["1"]["Name"] = [[ModMenu]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
 G2L["1"]["ResetOnSpawn"] = false;
@@ -19,457 +22,1296 @@ G2L["1"]["ResetOnSpawn"] = false;
 G2L["1"]:SetAttribute([[_lemonadeUniqueId]], [[mO1JWnkEmO1J]]);
 
 
--- StarterGui.ModMenu.MainFrame
-G2L["2"] = Instance.new("Frame", G2L["1"]);
-G2L["2"]["BorderSizePixel"] = 0;
-G2L["2"]["BackgroundColor3"] = Color3.fromRGB(30, 3, 58);
-G2L["2"]["Size"] = UDim2.new(0, 244, 0, 250);
-G2L["2"]["Position"] = UDim2.new(0.4042, 0, 0.34332, 0);
-G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2"]["Name"] = [[MainFrame]];
+-- ServerStorage.ModMenu.ToastManager
+G2L["2"] = Instance.new("ModuleScript", G2L["1"]);
+G2L["2"]["Name"] = [[ToastManager]];
 -- Attributes
-G2L["2"]:SetAttribute([[_lemonadeUniqueId]], [[LSuzQCpPLSuz]]);
+G2L["2"]:SetAttribute([[_lemonadeUniqueId]], [[I0Uxl3GcI0Ux]]);
 
 
--- StarterGui.ModMenu.MainFrame.ScrollingFrame
-G2L["3"] = Instance.new("ScrollingFrame", G2L["2"]);
-G2L["3"]["Active"] = true;
-G2L["3"]["BorderSizePixel"] = 0;
-G2L["3"]["BackgroundColor3"] = Color3.fromRGB(30, 3, 58);
-G2L["3"]["Size"] = UDim2.new(0, 244, 0, 171);
-G2L["3"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3"]["Position"] = UDim2.new(0, 0, 0.116, 0);
-G2L["3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3"]["ScrollBarThickness"] = 0;
--- Attributes
-G2L["3"]:SetAttribute([[_lemonadeUniqueId]], [[Uf4Igj3DUf4I]]);
+-- ServerStorage.ModMenu.ClickSound
+G2L["3"] = Instance.new("LocalScript", G2L["1"]);
+G2L["3"]["Name"] = [[ClickSound]];
 
 
--- StarterGui.ModMenu.MainFrame.ScrollingFrame.FlySuper
-G2L["4"] = Instance.new("TextLabel", G2L["3"]);
-G2L["4"]["LineHeight"] = 0.53;
+-- ServerStorage.ModMenu.MainFrame
+G2L["4"] = Instance.new("Frame", G2L["1"]);
+G2L["4"]["Active"] = true;
 G2L["4"]["BorderSizePixel"] = 0;
-G2L["4"]["TextSize"] = 20;
-G2L["4"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["4"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["4"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["4"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["4"]["BackgroundTransparency"] = 1;
-G2L["4"]["Size"] = UDim2.new(0, 200, 0, 26);
+G2L["4"]["BackgroundColor3"] = Color3.fromRGB(30, 3, 58);
+G2L["4"]["Size"] = UDim2.new(0.20487, 0, 0.31211, 0);
+G2L["4"]["Position"] = UDim2.new(0.4042, 0, 0.34332, 0);
 G2L["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4"]["Text"] = [[ FLY SUPER]];
-G2L["4"]["Name"] = [[FlySuper]];
-G2L["4"]["Position"] = UDim2.new(0, 0, 0.014, 0);
+G2L["4"]["Name"] = [[MainFrame]];
 -- Attributes
-G2L["4"]:SetAttribute([[_lemonadeUniqueId]], [[0AAurpMY0AAu]]);
+G2L["4"]:SetAttribute([[_lemonadeUniqueId]], [[LSuzQCpPLSuz]]);
 
 
--- StarterGui.ModMenu.MainFrame.ScrollingFrame.FlySuper.Switch
-G2L["5"] = Instance.new("TextButton", G2L["4"]);
-G2L["5"]["BorderSizePixel"] = 0;
-G2L["5"]["AutoButtonColor"] = false;
-G2L["5"]["BackgroundColor3"] = Color3.fromRGB(56, 13, 13);
-G2L["5"]["AnchorPoint"] = Vector2.new(1, 0.5);
-G2L["5"]["Size"] = UDim2.new(0, 34, 0, 14);
-G2L["5"]["Text"] = [[]];
-G2L["5"]["Name"] = [[Switch]];
-G2L["5"]["Position"] = UDim2.new(1.205, -4, 0.5, 0);
+-- ServerStorage.ModMenu.MainFrame.DragScript
+G2L["5"] = Instance.new("LocalScript", G2L["4"]);
+-- [ERROR] cannot convert Capabilities, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["5"]["Sandboxed"] = true;
+G2L["5"]["Name"] = [[DragScript]];
 -- Attributes
-G2L["5"]:SetAttribute([[_lemonadeUniqueId]], [[jfqxIlbBjfqx]]);
+G2L["5"]:SetAttribute([[_lemonadeUniqueId]], [[CP64AMGAL7A7]]);
 
 
--- StarterGui.ModMenu.MainFrame.ScrollingFrame.FlySuper.Switch.SwitchAnim
-G2L["6"] = Instance.new("LocalScript", G2L["5"]);
-G2L["6"]["Name"] = [[SwitchAnim]];
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame
+G2L["6"] = Instance.new("ScrollingFrame", G2L["4"]);
+G2L["6"]["Active"] = true;
+G2L["6"]["BorderSizePixel"] = 0;
+G2L["6"]["BackgroundColor3"] = Color3.fromRGB(30, 3, 58);
+G2L["6"]["Size"] = UDim2.new(1, 0, 0.684, 0);
+G2L["6"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6"]["Position"] = UDim2.new(0, 0, 0.116, 0);
+G2L["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6"]["ScrollBarThickness"] = 0;
 -- Attributes
-G2L["6"]:SetAttribute([[_lemonadeUniqueId]], [[wYvsYKVdwYvs]]);
+G2L["6"]:SetAttribute([[_lemonadeUniqueId]], [[Uf4Igj3DUf4I]]);
 
 
--- StarterGui.ModMenu.MainFrame.ScrollingFrame.FlySuper.Switch.Corner
-G2L["7"] = Instance.new("UICorner", G2L["5"]);
-G2L["7"]["Name"] = [[Corner]];
-G2L["7"]["CornerRadius"] = UDim.new(0, 9);
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.FlySuper
+G2L["7"] = Instance.new("TextLabel", G2L["6"]);
+G2L["7"]["LineHeight"] = 0.53;
+G2L["7"]["BorderSizePixel"] = 0;
+G2L["7"]["TextSize"] = 20;
+G2L["7"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["7"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7"]["BackgroundTransparency"] = 1;
+G2L["7"]["Size"] = UDim2.new(0.81967, 0, 0.15205, 0);
+G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7"]["Text"] = [[ FLY SUPER]];
+G2L["7"]["Name"] = [[FlySuper]];
+G2L["7"]["Position"] = UDim2.new(0, 0, 0.014, 0);
 -- Attributes
-G2L["7"]:SetAttribute([[_lemonadeUniqueId]], [[bWEOunw8bWEO]]);
+G2L["7"]:SetAttribute([[_lemonadeUniqueId]], [[0AAurpMY0AAu]]);
 
 
--- StarterGui.ModMenu.MainFrame.ScrollingFrame.FlySuper.Switch.Knob
-G2L["8"] = Instance.new("Frame", G2L["5"]);
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.FlySuper.Switch
+G2L["8"] = Instance.new("TextButton", G2L["7"]);
 G2L["8"]["BorderSizePixel"] = 0;
-G2L["8"]["BackgroundColor3"] = Color3.fromRGB(216, 41, 41);
-G2L["8"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["8"]["Size"] = UDim2.new(0, 20, 0, 20);
-G2L["8"]["Position"] = UDim2.new(-0.08824, 13, 0.5, 0);
-G2L["8"]["Name"] = [[Knob]];
+G2L["8"]["AutoButtonColor"] = false;
+G2L["8"]["BackgroundColor3"] = Color3.fromRGB(56, 13, 13);
+G2L["8"]["AnchorPoint"] = Vector2.new(1, 0.5);
+G2L["8"]["Size"] = UDim2.new(0.17, 0, 0.18415, 0);
+G2L["8"]["Text"] = [[]];
+G2L["8"]["Name"] = [[Switch]];
+G2L["8"]["Position"] = UDim2.new(1.185, 0, 0.5, 0);
 -- Attributes
-G2L["8"]:SetAttribute([[_lemonadeUniqueId]], [[nBTyEJQknBTy]]);
+G2L["8"]:SetAttribute([[_lemonadeUniqueId]], [[jfqxIlbBjfqx]]);
 
 
--- StarterGui.ModMenu.MainFrame.ScrollingFrame.FlySuper.Switch.Knob.Corner
-G2L["9"] = Instance.new("UICorner", G2L["8"]);
-G2L["9"]["Name"] = [[Corner]];
-G2L["9"]["CornerRadius"] = UDim.new(1, 0);
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.FlySuper.Switch.SwitchAnim
+G2L["9"] = Instance.new("LocalScript", G2L["8"]);
+G2L["9"]["Name"] = [[SwitchAnim]];
 -- Attributes
-G2L["9"]:SetAttribute([[_lemonadeUniqueId]], [[AFDIVf9nAFDI]]);
+G2L["9"]:SetAttribute([[_lemonadeUniqueId]], [[wYvsYKVdwYvs]]);
 
 
--- StarterGui.ModMenu.MainFrame.ScrollingFrame.MultiJumps
-G2L["a"] = Instance.new("TextLabel", G2L["3"]);
-G2L["a"]["LineHeight"] = 0.53;
-G2L["a"]["BorderSizePixel"] = 0;
-G2L["a"]["TextSize"] = 20;
-G2L["a"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["a"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["a"]["BackgroundTransparency"] = 1;
-G2L["a"]["Size"] = UDim2.new(0, 200, 0, 26);
-G2L["a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["a"]["Text"] = [[ MULTY JUMPS]];
-G2L["a"]["Name"] = [[MultiJumps]];
-G2L["a"]["Position"] = UDim2.new(0, 0, 0.066, 0);
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.FlySuper.Switch.Corner
+G2L["a"] = Instance.new("UICorner", G2L["8"]);
+G2L["a"]["Name"] = [[Corner]];
+G2L["a"]["CornerRadius"] = UDim.new(0, 9);
 -- Attributes
-G2L["a"]:SetAttribute([[_lemonadeUniqueId]], [[fvwyUNoqfvwy]]);
+G2L["a"]:SetAttribute([[_lemonadeUniqueId]], [[bWEOunw8bWEO]]);
 
 
--- StarterGui.ModMenu.MainFrame.ScrollingFrame.MultiJumps.Switch
-G2L["b"] = Instance.new("TextButton", G2L["a"]);
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.FlySuper.Switch.Knob
+G2L["b"] = Instance.new("Frame", G2L["8"]);
 G2L["b"]["BorderSizePixel"] = 0;
-G2L["b"]["AutoButtonColor"] = false;
-G2L["b"]["BackgroundColor3"] = Color3.fromRGB(56, 13, 13);
-G2L["b"]["AnchorPoint"] = Vector2.new(1, 0.5);
-G2L["b"]["Size"] = UDim2.new(0, 34, 0, 14);
-G2L["b"]["Text"] = [[]];
-G2L["b"]["Name"] = [[Switch]];
-G2L["b"]["Position"] = UDim2.new(1.205, -4, 0.5, 0);
+G2L["b"]["BackgroundColor3"] = Color3.fromRGB(216, 41, 41);
+G2L["b"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["b"]["Size"] = UDim2.new(0.58824, 0, 1.42857, 0);
+G2L["b"]["Position"] = UDim2.new(0.29412, 0, 0.5, 0);
+G2L["b"]["Name"] = [[Knob]];
 -- Attributes
-G2L["b"]:SetAttribute([[_lemonadeUniqueId]], [[YD4AF4LGNBDR]]);
+G2L["b"]:SetAttribute([[_lemonadeUniqueId]], [[nBTyEJQknBTy]]);
 
 
--- StarterGui.ModMenu.MainFrame.ScrollingFrame.MultiJumps.Switch.SwitchAnim
-G2L["c"] = Instance.new("LocalScript", G2L["b"]);
-G2L["c"]["Name"] = [[SwitchAnim]];
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.FlySuper.Switch.Knob.Corner
+G2L["c"] = Instance.new("UICorner", G2L["b"]);
+G2L["c"]["Name"] = [[Corner]];
+G2L["c"]["CornerRadius"] = UDim.new(1, 0);
 -- Attributes
-G2L["c"]:SetAttribute([[_lemonadeUniqueId]], [[74MU2OPYAPDH]]);
+G2L["c"]:SetAttribute([[_lemonadeUniqueId]], [[AFDIVf9nAFDI]]);
 
 
--- StarterGui.ModMenu.MainFrame.ScrollingFrame.MultiJumps.Switch.Corner
-G2L["d"] = Instance.new("UICorner", G2L["b"]);
-G2L["d"]["Name"] = [[Corner]];
-G2L["d"]["CornerRadius"] = UDim.new(0, 9);
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.MultiJumps
+G2L["d"] = Instance.new("TextLabel", G2L["6"]);
+G2L["d"]["LineHeight"] = 0.53;
+G2L["d"]["BorderSizePixel"] = 0;
+G2L["d"]["TextSize"] = 20;
+G2L["d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["d"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["d"]["BackgroundTransparency"] = 1;
+G2L["d"]["Size"] = UDim2.new(0.81967, 0, 0.15205, 0);
+G2L["d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["d"]["Text"] = [[ MULTY JUMPS]];
+G2L["d"]["Name"] = [[MultiJumps]];
+G2L["d"]["Position"] = UDim2.new(0, 0, 0.066, 0);
 -- Attributes
-G2L["d"]:SetAttribute([[_lemonadeUniqueId]], [[SPD7PLJXHTFF]]);
+G2L["d"]:SetAttribute([[_lemonadeUniqueId]], [[fvwyUNoqfvwy]]);
 
 
--- StarterGui.ModMenu.MainFrame.ScrollingFrame.MultiJumps.Switch.Knob
-G2L["e"] = Instance.new("Frame", G2L["b"]);
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.MultiJumps.Switch
+G2L["e"] = Instance.new("TextButton", G2L["d"]);
 G2L["e"]["BorderSizePixel"] = 0;
-G2L["e"]["BackgroundColor3"] = Color3.fromRGB(216, 41, 41);
-G2L["e"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["e"]["Size"] = UDim2.new(0, 20, 0, 20);
-G2L["e"]["Position"] = UDim2.new(-0.08824, 13, 0.5, 0);
-G2L["e"]["Name"] = [[Knob]];
+G2L["e"]["AutoButtonColor"] = false;
+G2L["e"]["BackgroundColor3"] = Color3.fromRGB(56, 13, 13);
+G2L["e"]["AnchorPoint"] = Vector2.new(1, 0.5);
+G2L["e"]["Size"] = UDim2.new(0.17, 0, 0.18415, 0);
+G2L["e"]["Text"] = [[]];
+G2L["e"]["Name"] = [[Switch]];
+G2L["e"]["Position"] = UDim2.new(1.185, 0, 0.5, 0);
 -- Attributes
-G2L["e"]:SetAttribute([[_lemonadeUniqueId]], [[PYXDV2EV6EBU]]);
+G2L["e"]:SetAttribute([[_lemonadeUniqueId]], [[YD4AF4LGNBDR]]);
 
 
--- StarterGui.ModMenu.MainFrame.ScrollingFrame.MultiJumps.Switch.Knob.Corner
-G2L["f"] = Instance.new("UICorner", G2L["e"]);
-G2L["f"]["Name"] = [[Corner]];
-G2L["f"]["CornerRadius"] = UDim.new(1, 0);
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.MultiJumps.Switch.SwitchAnim
+G2L["f"] = Instance.new("LocalScript", G2L["e"]);
+G2L["f"]["Name"] = [[SwitchAnim]];
 -- Attributes
-G2L["f"]:SetAttribute([[_lemonadeUniqueId]], [[N3B6UZK3EBAT]]);
+G2L["f"]:SetAttribute([[_lemonadeUniqueId]], [[74MU2OPYAPDH]]);
 
 
--- StarterGui.ModMenu.MainFrame.ScrollingFrame.WallHack
-G2L["10"] = Instance.new("TextLabel", G2L["3"]);
-G2L["10"]["LineHeight"] = 0.53;
-G2L["10"]["BorderSizePixel"] = 0;
-G2L["10"]["TextSize"] = 20;
-G2L["10"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["10"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["10"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["10"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["10"]["BackgroundTransparency"] = 1;
-G2L["10"]["Size"] = UDim2.new(0, 200, 0, 26);
-G2L["10"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["10"]["Text"] = [[ WALLHACK]];
-G2L["10"]["Name"] = [[WallHack]];
-G2L["10"]["Position"] = UDim2.new(0, 0, 0.118, 0);
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.MultiJumps.Switch.Corner
+G2L["10"] = Instance.new("UICorner", G2L["e"]);
+G2L["10"]["Name"] = [[Corner]];
+G2L["10"]["CornerRadius"] = UDim.new(0, 9);
 -- Attributes
-G2L["10"]:SetAttribute([[_lemonadeUniqueId]], [[CVMWyshXCVMW]]);
+G2L["10"]:SetAttribute([[_lemonadeUniqueId]], [[SPD7PLJXHTFF]]);
 
 
--- StarterGui.ModMenu.MainFrame.ScrollingFrame.WallHack.Switch
-G2L["11"] = Instance.new("TextButton", G2L["10"]);
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.MultiJumps.Switch.Knob
+G2L["11"] = Instance.new("Frame", G2L["e"]);
 G2L["11"]["BorderSizePixel"] = 0;
-G2L["11"]["AutoButtonColor"] = false;
-G2L["11"]["BackgroundColor3"] = Color3.fromRGB(56, 13, 13);
-G2L["11"]["AnchorPoint"] = Vector2.new(1, 0.5);
-G2L["11"]["Size"] = UDim2.new(0, 34, 0, 14);
-G2L["11"]["Text"] = [[]];
-G2L["11"]["Name"] = [[Switch]];
-G2L["11"]["Position"] = UDim2.new(1.205, -4, 0.5, 0);
+G2L["11"]["BackgroundColor3"] = Color3.fromRGB(216, 41, 41);
+G2L["11"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["11"]["Size"] = UDim2.new(0.58824, 0, 1.42857, 0);
+G2L["11"]["Position"] = UDim2.new(0.29412, 0, 0.5, 0);
+G2L["11"]["Name"] = [[Knob]];
 -- Attributes
-G2L["11"]:SetAttribute([[_lemonadeUniqueId]], [[QX4II2M3H3BB]]);
+G2L["11"]:SetAttribute([[_lemonadeUniqueId]], [[PYXDV2EV6EBU]]);
 
 
--- StarterGui.ModMenu.MainFrame.ScrollingFrame.WallHack.Switch.SwitchAnim
-G2L["12"] = Instance.new("LocalScript", G2L["11"]);
-G2L["12"]["Name"] = [[SwitchAnim]];
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.MultiJumps.Switch.Knob.Corner
+G2L["12"] = Instance.new("UICorner", G2L["11"]);
+G2L["12"]["Name"] = [[Corner]];
+G2L["12"]["CornerRadius"] = UDim.new(1, 0);
 -- Attributes
-G2L["12"]:SetAttribute([[_lemonadeUniqueId]], [[BBBBYSGEBDEE]]);
+G2L["12"]:SetAttribute([[_lemonadeUniqueId]], [[N3B6UZK3EBAT]]);
 
 
--- StarterGui.ModMenu.MainFrame.ScrollingFrame.WallHack.Switch.Corner
-G2L["13"] = Instance.new("UICorner", G2L["11"]);
-G2L["13"]["Name"] = [[Corner]];
-G2L["13"]["CornerRadius"] = UDim.new(0, 9);
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.WallHack
+G2L["13"] = Instance.new("TextLabel", G2L["6"]);
+G2L["13"]["LineHeight"] = 0.53;
+G2L["13"]["BorderSizePixel"] = 0;
+G2L["13"]["TextSize"] = 20;
+G2L["13"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["13"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["13"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["13"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["13"]["BackgroundTransparency"] = 1;
+G2L["13"]["Size"] = UDim2.new(0.81967, 0, 0.15205, 0);
+G2L["13"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["13"]["Text"] = [[ WALLHACK]];
+G2L["13"]["Name"] = [[WallHack]];
+G2L["13"]["Position"] = UDim2.new(0, 0, 0.118, 0);
 -- Attributes
-G2L["13"]:SetAttribute([[_lemonadeUniqueId]], [[7FZM33FUCX7C]]);
+G2L["13"]:SetAttribute([[_lemonadeUniqueId]], [[CVMWyshXCVMW]]);
 
 
--- StarterGui.ModMenu.MainFrame.ScrollingFrame.WallHack.Switch.Knob
-G2L["14"] = Instance.new("Frame", G2L["11"]);
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.WallHack.Switch
+G2L["14"] = Instance.new("TextButton", G2L["13"]);
 G2L["14"]["BorderSizePixel"] = 0;
-G2L["14"]["BackgroundColor3"] = Color3.fromRGB(216, 41, 41);
-G2L["14"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["14"]["Size"] = UDim2.new(0, 20, 0, 20);
-G2L["14"]["Position"] = UDim2.new(-0.08824, 13, 0.5, 0);
-G2L["14"]["Name"] = [[Knob]];
+G2L["14"]["AutoButtonColor"] = false;
+G2L["14"]["BackgroundColor3"] = Color3.fromRGB(56, 13, 13);
+G2L["14"]["AnchorPoint"] = Vector2.new(1, 0.5);
+G2L["14"]["Size"] = UDim2.new(0.17, 0, 0.18415, 0);
+G2L["14"]["Text"] = [[]];
+G2L["14"]["Name"] = [[Switch]];
+G2L["14"]["Position"] = UDim2.new(1.185, 0, 0.5, 0);
 -- Attributes
-G2L["14"]:SetAttribute([[_lemonadeUniqueId]], [[Q3LXJXKEOUV6]]);
+G2L["14"]:SetAttribute([[_lemonadeUniqueId]], [[QX4II2M3H3BB]]);
 
 
--- StarterGui.ModMenu.MainFrame.ScrollingFrame.WallHack.Switch.Knob.Corner
-G2L["15"] = Instance.new("UICorner", G2L["14"]);
-G2L["15"]["Name"] = [[Corner]];
-G2L["15"]["CornerRadius"] = UDim.new(1, 0);
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.WallHack.Switch.SwitchAnim
+G2L["15"] = Instance.new("LocalScript", G2L["14"]);
+G2L["15"]["Name"] = [[SwitchAnim]];
 -- Attributes
-G2L["15"]:SetAttribute([[_lemonadeUniqueId]], [[UQTDHPA64XY4]]);
+G2L["15"]:SetAttribute([[_lemonadeUniqueId]], [[BBBBYSGEBDEE]]);
 
 
--- StarterGui.ModMenu.MainFrame.ScrollingFrame.Helicopter
-G2L["16"] = Instance.new("TextLabel", G2L["3"]);
-G2L["16"]["LineHeight"] = 0.53;
-G2L["16"]["BorderSizePixel"] = 0;
-G2L["16"]["TextSize"] = 20;
-G2L["16"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["16"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["16"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["16"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["16"]["BackgroundTransparency"] = 1;
-G2L["16"]["Size"] = UDim2.new(0, 200, 0, 26);
-G2L["16"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["16"]["Text"] = [[ HELICOPTER]];
-G2L["16"]["Name"] = [[Helicopter]];
-G2L["16"]["Position"] = UDim2.new(0, 0, 0.17, 0);
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.WallHack.Switch.Corner
+G2L["16"] = Instance.new("UICorner", G2L["14"]);
+G2L["16"]["Name"] = [[Corner]];
+G2L["16"]["CornerRadius"] = UDim.new(0, 9);
 -- Attributes
-G2L["16"]:SetAttribute([[_lemonadeUniqueId]], [[9V8NPLQU9V8N]]);
+G2L["16"]:SetAttribute([[_lemonadeUniqueId]], [[7FZM33FUCX7C]]);
 
 
--- StarterGui.ModMenu.MainFrame.ScrollingFrame.Helicopter.Switch
-G2L["17"] = Instance.new("TextButton", G2L["16"]);
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.WallHack.Switch.Knob
+G2L["17"] = Instance.new("Frame", G2L["14"]);
 G2L["17"]["BorderSizePixel"] = 0;
-G2L["17"]["AutoButtonColor"] = false;
-G2L["17"]["BackgroundColor3"] = Color3.fromRGB(56, 13, 13);
-G2L["17"]["AnchorPoint"] = Vector2.new(1, 0.5);
-G2L["17"]["Size"] = UDim2.new(0, 34, 0, 14);
-G2L["17"]["Text"] = [[]];
-G2L["17"]["Name"] = [[Switch]];
-G2L["17"]["Position"] = UDim2.new(1.205, -4, 0.5, 0);
+G2L["17"]["BackgroundColor3"] = Color3.fromRGB(216, 41, 41);
+G2L["17"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["17"]["Size"] = UDim2.new(0.58824, 0, 1.42857, 0);
+G2L["17"]["Position"] = UDim2.new(0.29412, 0, 0.5, 0);
+G2L["17"]["Name"] = [[Knob]];
 -- Attributes
-G2L["17"]:SetAttribute([[_lemonadeUniqueId]], [[TB6CEDMLQU76]]);
+G2L["17"]:SetAttribute([[_lemonadeUniqueId]], [[Q3LXJXKEOUV6]]);
 
 
--- StarterGui.ModMenu.MainFrame.ScrollingFrame.Helicopter.Switch.SwitchAnim
-G2L["18"] = Instance.new("LocalScript", G2L["17"]);
-G2L["18"]["Name"] = [[SwitchAnim]];
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.WallHack.Switch.Knob.Corner
+G2L["18"] = Instance.new("UICorner", G2L["17"]);
+G2L["18"]["Name"] = [[Corner]];
+G2L["18"]["CornerRadius"] = UDim.new(1, 0);
 -- Attributes
-G2L["18"]:SetAttribute([[_lemonadeUniqueId]], [[DCYX6AIR42SL]]);
+G2L["18"]:SetAttribute([[_lemonadeUniqueId]], [[UQTDHPA64XY4]]);
 
 
--- StarterGui.ModMenu.MainFrame.ScrollingFrame.Helicopter.Switch.Corner
-G2L["19"] = Instance.new("UICorner", G2L["17"]);
-G2L["19"]["Name"] = [[Corner]];
-G2L["19"]["CornerRadius"] = UDim.new(0, 9);
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.Helicopter
+G2L["19"] = Instance.new("TextLabel", G2L["6"]);
+G2L["19"]["LineHeight"] = 0.53;
+G2L["19"]["BorderSizePixel"] = 0;
+G2L["19"]["TextSize"] = 20;
+G2L["19"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["19"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["19"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["19"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["19"]["BackgroundTransparency"] = 1;
+G2L["19"]["Size"] = UDim2.new(0.81967, 0, 0.15205, 0);
+G2L["19"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["19"]["Text"] = [[ HELICOPTER]];
+G2L["19"]["Name"] = [[Helicopter]];
+G2L["19"]["Position"] = UDim2.new(0, 0, 0.17, 0);
 -- Attributes
-G2L["19"]:SetAttribute([[_lemonadeUniqueId]], [[NC6ZYKGEABQU]]);
+G2L["19"]:SetAttribute([[_lemonadeUniqueId]], [[9V8NPLQU9V8N]]);
 
 
--- StarterGui.ModMenu.MainFrame.ScrollingFrame.Helicopter.Switch.Knob
-G2L["1a"] = Instance.new("Frame", G2L["17"]);
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.Helicopter.Switch
+G2L["1a"] = Instance.new("TextButton", G2L["19"]);
 G2L["1a"]["BorderSizePixel"] = 0;
-G2L["1a"]["BackgroundColor3"] = Color3.fromRGB(216, 41, 41);
-G2L["1a"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["1a"]["Size"] = UDim2.new(0, 20, 0, 20);
-G2L["1a"]["Position"] = UDim2.new(-0.08824, 13, 0.5, 0);
-G2L["1a"]["Name"] = [[Knob]];
+G2L["1a"]["AutoButtonColor"] = false;
+G2L["1a"]["BackgroundColor3"] = Color3.fromRGB(56, 13, 13);
+G2L["1a"]["AnchorPoint"] = Vector2.new(1, 0.5);
+G2L["1a"]["Size"] = UDim2.new(0.17, 0, 0.18415, 0);
+G2L["1a"]["Text"] = [[]];
+G2L["1a"]["Name"] = [[Switch]];
+G2L["1a"]["Position"] = UDim2.new(1.185, 0, 0.5, 0);
 -- Attributes
-G2L["1a"]:SetAttribute([[_lemonadeUniqueId]], [[YBED7XMKXKPJ]]);
+G2L["1a"]:SetAttribute([[_lemonadeUniqueId]], [[TB6CEDMLQU76]]);
 
 
--- StarterGui.ModMenu.MainFrame.ScrollingFrame.Helicopter.Switch.Knob.Corner
-G2L["1b"] = Instance.new("UICorner", G2L["1a"]);
-G2L["1b"]["Name"] = [[Corner]];
-G2L["1b"]["CornerRadius"] = UDim.new(1, 0);
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.Helicopter.Switch.SwitchAnim
+G2L["1b"] = Instance.new("LocalScript", G2L["1a"]);
+G2L["1b"]["Name"] = [[SwitchAnim]];
 -- Attributes
-G2L["1b"]:SetAttribute([[_lemonadeUniqueId]], [[TJNIHJCZFZEP]]);
+G2L["1b"]:SetAttribute([[_lemonadeUniqueId]], [[DCYX6AIR42SL]]);
 
 
--- StarterGui.ModMenu.MainFrame.ScrollingFrame.Speed
-G2L["1c"] = Instance.new("TextLabel", G2L["3"]);
-G2L["1c"]["LineHeight"] = 0.53;
-G2L["1c"]["BorderSizePixel"] = 0;
-G2L["1c"]["TextSize"] = 20;
-G2L["1c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["1c"]["TextYAlignment"] = Enum.TextYAlignment.Top;
-G2L["1c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["1c"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["1c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["1c"]["BackgroundTransparency"] = 1;
-G2L["1c"]["RichText"] = true;
-G2L["1c"]["Size"] = UDim2.new(0, 200, 0, 46);
-G2L["1c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1c"]["Text"] = [[ SPEED: <font color="#4CD04B">16</font>]];
-G2L["1c"]["Name"] = [[Speed]];
-G2L["1c"]["Position"] = UDim2.new(0, 0, 0.222, 0);
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.Helicopter.Switch.Corner
+G2L["1c"] = Instance.new("UICorner", G2L["1a"]);
+G2L["1c"]["Name"] = [[Corner]];
+G2L["1c"]["CornerRadius"] = UDim.new(0, 9);
 -- Attributes
-G2L["1c"]:SetAttribute([[_lemonadeUniqueId]], [[M9m6IGmGM9m6]]);
+G2L["1c"]:SetAttribute([[_lemonadeUniqueId]], [[NC6ZYKGEABQU]]);
 
 
--- StarterGui.ModMenu.MainFrame.ScrollingFrame.Speed.Track
-G2L["1d"] = Instance.new("Frame", G2L["1c"]);
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.Helicopter.Switch.Knob
+G2L["1d"] = Instance.new("Frame", G2L["1a"]);
 G2L["1d"]["BorderSizePixel"] = 0;
-G2L["1d"]["BackgroundColor3"] = Color3.fromRGB(59, 69, 83);
-G2L["1d"]["Size"] = UDim2.new(0, 225, 0, 3);
-G2L["1d"]["Position"] = UDim2.new(0, 9, 0, 28);
-G2L["1d"]["Name"] = [[Track]];
+G2L["1d"]["BackgroundColor3"] = Color3.fromRGB(216, 41, 41);
+G2L["1d"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["1d"]["Size"] = UDim2.new(0.58824, 0, 1.42857, 0);
+G2L["1d"]["Position"] = UDim2.new(0.29412, 0, 0.5, 0);
+G2L["1d"]["Name"] = [[Knob]];
 -- Attributes
-G2L["1d"]:SetAttribute([[_lemonadeUniqueId]], [[wggqPkOuwggq]]);
+G2L["1d"]:SetAttribute([[_lemonadeUniqueId]], [[YBED7XMKXKPJ]]);
 
 
--- StarterGui.ModMenu.MainFrame.ScrollingFrame.Speed.Track.Knob
-G2L["1e"] = Instance.new("Frame", G2L["1d"]);
-G2L["1e"]["ZIndex"] = 2;
-G2L["1e"]["BorderSizePixel"] = 0;
-G2L["1e"]["BackgroundColor3"] = Color3.fromRGB(134, 217, 223);
-G2L["1e"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["1e"]["Size"] = UDim2.new(0, 14, 0, 14);
-G2L["1e"]["Position"] = UDim2.new(0, 24, 0.5, 0);
-G2L["1e"]["Name"] = [[Knob]];
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.Helicopter.Switch.Knob.Corner
+G2L["1e"] = Instance.new("UICorner", G2L["1d"]);
+G2L["1e"]["Name"] = [[Corner]];
+G2L["1e"]["CornerRadius"] = UDim.new(1, 0);
 -- Attributes
-G2L["1e"]:SetAttribute([[_lemonadeUniqueId]], [[WpJKiB5PWpJK]]);
+G2L["1e"]:SetAttribute([[_lemonadeUniqueId]], [[TJNIHJCZFZEP]]);
 
 
--- StarterGui.ModMenu.MainFrame.ScrollingFrame.Speed.Track.Knob.Corner
-G2L["1f"] = Instance.new("UICorner", G2L["1e"]);
-G2L["1f"]["Name"] = [[Corner]];
-G2L["1f"]["CornerRadius"] = UDim.new(1, 0);
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.Speed
+G2L["1f"] = Instance.new("TextLabel", G2L["6"]);
+G2L["1f"]["LineHeight"] = 0.53;
+G2L["1f"]["BorderSizePixel"] = 0;
+G2L["1f"]["TextSize"] = 20;
+G2L["1f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["1f"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["1f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1f"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1f"]["BackgroundTransparency"] = 1;
+G2L["1f"]["RichText"] = true;
+G2L["1f"]["Size"] = UDim2.new(0.81967, 0, 0.26901, 0);
+G2L["1f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1f"]["Text"] = [[ SPEED: <font color="#4CD04B">16</font>]];
+G2L["1f"]["Name"] = [[Speed]];
+G2L["1f"]["Position"] = UDim2.new(0, 0, 0.658, 0);
 -- Attributes
-G2L["1f"]:SetAttribute([[_lemonadeUniqueId]], [[J3rnSx0aJ3rn]]);
+G2L["1f"]:SetAttribute([[_lemonadeUniqueId]], [[M9m6IGmGM9m6]]);
 
 
--- StarterGui.ModMenu.MainFrame.ScrollingFrame.Speed.SpeedSlider
-G2L["20"] = Instance.new("LocalScript", G2L["1c"]);
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.Speed.SpeedSlider
+G2L["20"] = Instance.new("LocalScript", G2L["1f"]);
 G2L["20"]["Name"] = [[SpeedSlider]];
 -- Attributes
 G2L["20"]:SetAttribute([[_lemonadeUniqueId]], [[tP8DkxsytP8D]]);
 
 
--- StarterGui.ModMenu.MainFrame.TextLabel
-G2L["21"] = Instance.new("TextLabel", G2L["2"]);
-G2L["21"]["TextWrapped"] = true;
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.Speed.Track
+G2L["21"] = Instance.new("Frame", G2L["1f"]);
 G2L["21"]["BorderSizePixel"] = 0;
-G2L["21"]["TextSize"] = 12;
-G2L["21"]["BackgroundColor3"] = Color3.fromRGB(178, 0, 4);
-G2L["21"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["21"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["21"]["Size"] = UDim2.new(0, 244, 0, 23);
-G2L["21"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["21"]["Text"] = [[https://github.com/T1mohDev/T1Hub - Best script]];
-G2L["21"]["Position"] = UDim2.new(0, 0, 0.024, 0);
+G2L["21"]["BackgroundColor3"] = Color3.fromRGB(59, 69, 83);
+G2L["21"]["Size"] = UDim2.new(1.125, 0, 0.0223, 0);
+G2L["21"]["Position"] = UDim2.new(0.045, 0, 0.20817, 0);
+G2L["21"]["Name"] = [[Track]];
 -- Attributes
-G2L["21"]:SetAttribute([[_lemonadeUniqueId]], [[01tfO3jp01tf]]);
+G2L["21"]:SetAttribute([[_lemonadeUniqueId]], [[wggqPkOuwggq]]);
 
 
--- StarterGui.ModMenu.MainFrame.Close
-G2L["22"] = Instance.new("TextButton", G2L["2"]);
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.Speed.Track.Knob
+G2L["22"] = Instance.new("Frame", G2L["21"]);
+G2L["22"]["ZIndex"] = 2;
 G2L["22"]["BorderSizePixel"] = 0;
-G2L["22"]["TextSize"] = 14;
-G2L["22"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["22"]["BackgroundColor3"] = Color3.fromRGB(34, 3, 67);
-G2L["22"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["22"]["Size"] = UDim2.new(0, 122, 0, 50);
-G2L["22"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["22"]["Text"] = [[❌]];
-G2L["22"]["Name"] = [[Close]];
-G2L["22"]["Position"] = UDim2.new(0.5, 0, 0.8, 0);
+G2L["22"]["BackgroundColor3"] = Color3.fromRGB(134, 217, 223);
+G2L["22"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["22"]["Size"] = UDim2.new(0.06222, 0, 4.66667, 0);
+G2L["22"]["Position"] = UDim2.new(0.10667, 0, 0.5, 0);
+G2L["22"]["Name"] = [[Knob]];
 -- Attributes
-G2L["22"]:SetAttribute([[_lemonadeUniqueId]], [[MyFlkdzfMyFl]]);
+G2L["22"]:SetAttribute([[_lemonadeUniqueId]], [[WpJKiB5PWpJK]]);
 
 
--- StarterGui.ModMenu.MainFrame.FullHide
-G2L["23"] = Instance.new("TextButton", G2L["2"]);
-G2L["23"]["BorderSizePixel"] = 0;
-G2L["23"]["TextSize"] = 14;
-G2L["23"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["23"]["BackgroundColor3"] = Color3.fromRGB(34, 3, 67);
-G2L["23"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["23"]["Size"] = UDim2.new(0, 122, 0, 50);
-G2L["23"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["23"]["Text"] = [[⛔]];
-G2L["23"]["Name"] = [[FullHide]];
-G2L["23"]["Position"] = UDim2.new(0, 0, 0.8, 0);
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.Speed.Track.Knob.Corner
+G2L["23"] = Instance.new("UICorner", G2L["22"]);
+G2L["23"]["Name"] = [[Corner]];
+G2L["23"]["CornerRadius"] = UDim.new(1, 0);
 -- Attributes
-G2L["23"]:SetAttribute([[_lemonadeUniqueId]], [[d98uz3Dbd98u]]);
+G2L["23"]:SetAttribute([[_lemonadeUniqueId]], [[J3rnSx0aJ3rn]]);
 
 
--- StarterGui.ModMenu.MainFrame.FullHide.CloseScript
-G2L["24"] = Instance.new("LocalScript", G2L["23"]);
-G2L["24"]["Name"] = [[CloseScript]];
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.Spin
+G2L["24"] = Instance.new("TextLabel", G2L["6"]);
+G2L["24"]["LineHeight"] = 0.53;
+G2L["24"]["BorderSizePixel"] = 0;
+G2L["24"]["TextSize"] = 20;
+G2L["24"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["24"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["24"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["24"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["24"]["BackgroundTransparency"] = 1;
+G2L["24"]["Size"] = UDim2.new(0.81967, 0, 0.15205, 0);
+G2L["24"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["24"]["Text"] = [[ SPIN PLAYER]];
+G2L["24"]["Name"] = [[Spin]];
+G2L["24"]["Position"] = UDim2.new(0, 0, 0.222, 0);
 -- Attributes
-G2L["24"]:SetAttribute([[_lemonadeUniqueId]], [[3CTFDIAVCRHF]]);
+G2L["24"]:SetAttribute([[_lemonadeUniqueId]], [[sfqhEDWQsfqh]]);
 
 
--- StarterGui.ModMenu.MainFrame.DragScript
-G2L["25"] = Instance.new("LocalScript", G2L["2"]);
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.Spin.Switch
+G2L["25"] = Instance.new("TextButton", G2L["24"]);
+G2L["25"]["BorderSizePixel"] = 0;
+G2L["25"]["AutoButtonColor"] = false;
+G2L["25"]["BackgroundColor3"] = Color3.fromRGB(56, 13, 13);
+G2L["25"]["AnchorPoint"] = Vector2.new(1, 0.5);
+G2L["25"]["Size"] = UDim2.new(0.17, 0, 0.18415, 0);
+G2L["25"]["Text"] = [[]];
+G2L["25"]["Name"] = [[Switch]];
+G2L["25"]["Position"] = UDim2.new(1.185, 0, 0.5, 0);
+-- Attributes
+G2L["25"]:SetAttribute([[_lemonadeUniqueId]], [[dPJbevuydPJb]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.Spin.Switch.SwitchAnim
+G2L["26"] = Instance.new("LocalScript", G2L["25"]);
+G2L["26"]["Name"] = [[SwitchAnim]];
+-- Attributes
+G2L["26"]:SetAttribute([[_lemonadeUniqueId]], [[SIs3FHVFSIs3]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.Spin.Switch.Corner
+G2L["27"] = Instance.new("UICorner", G2L["25"]);
+G2L["27"]["Name"] = [[Corner]];
+G2L["27"]["CornerRadius"] = UDim.new(0, 9);
+-- Attributes
+G2L["27"]:SetAttribute([[_lemonadeUniqueId]], [[VGajs9C0VGaj]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.Spin.Switch.Knob
+G2L["28"] = Instance.new("Frame", G2L["25"]);
+G2L["28"]["BorderSizePixel"] = 0;
+G2L["28"]["BackgroundColor3"] = Color3.fromRGB(216, 41, 41);
+G2L["28"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["28"]["Size"] = UDim2.new(0.58824, 0, 1.42857, 0);
+G2L["28"]["Position"] = UDim2.new(0.29412, 0, 0.5, 0);
+G2L["28"]["Name"] = [[Knob]];
+-- Attributes
+G2L["28"]:SetAttribute([[_lemonadeUniqueId]], [[0iUEZT620iUE]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.Spin.Switch.Knob.Corner
+G2L["29"] = Instance.new("UICorner", G2L["28"]);
+G2L["29"]["Name"] = [[Corner]];
+G2L["29"]["CornerRadius"] = UDim.new(1, 0);
+-- Attributes
+G2L["29"]:SetAttribute([[_lemonadeUniqueId]], [[udH5LNuGudH5]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.LowGravity
+G2L["2a"] = Instance.new("TextLabel", G2L["6"]);
+G2L["2a"]["LineHeight"] = 0.53;
+G2L["2a"]["BorderSizePixel"] = 0;
+G2L["2a"]["TextSize"] = 20;
+G2L["2a"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["2a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2a"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2a"]["BackgroundTransparency"] = 1;
+G2L["2a"]["Size"] = UDim2.new(0.81967, 0, 0.15205, 0);
+G2L["2a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2a"]["Text"] = [[ LOW GRAVITY]];
+G2L["2a"]["Name"] = [[LowGravity]];
+G2L["2a"]["Position"] = UDim2.new(0, 0, 0.274, 0);
+-- Attributes
+G2L["2a"]:SetAttribute([[_lemonadeUniqueId]], [[wrGwk7HzwrGw]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.LowGravity.Switch
+G2L["2b"] = Instance.new("TextButton", G2L["2a"]);
+G2L["2b"]["BorderSizePixel"] = 0;
+G2L["2b"]["AutoButtonColor"] = false;
+G2L["2b"]["BackgroundColor3"] = Color3.fromRGB(56, 13, 13);
+G2L["2b"]["AnchorPoint"] = Vector2.new(1, 0.5);
+G2L["2b"]["Size"] = UDim2.new(0.17, 0, 0.18415, 0);
+G2L["2b"]["Text"] = [[]];
+G2L["2b"]["Name"] = [[Switch]];
+G2L["2b"]["Position"] = UDim2.new(1.185, 0, 0.5, 0);
+-- Attributes
+G2L["2b"]:SetAttribute([[_lemonadeUniqueId]], [[bQzU6oDnbQzU]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.LowGravity.Switch.SwitchAnim
+G2L["2c"] = Instance.new("LocalScript", G2L["2b"]);
+G2L["2c"]["Name"] = [[SwitchAnim]];
+-- Attributes
+G2L["2c"]:SetAttribute([[_lemonadeUniqueId]], [[JSRmnjzzJSRm]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.LowGravity.Switch.Corner
+G2L["2d"] = Instance.new("UICorner", G2L["2b"]);
+G2L["2d"]["Name"] = [[Corner]];
+G2L["2d"]["CornerRadius"] = UDim.new(0, 9);
+-- Attributes
+G2L["2d"]:SetAttribute([[_lemonadeUniqueId]], [[llagBK2Ollag]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.LowGravity.Switch.Knob
+G2L["2e"] = Instance.new("Frame", G2L["2b"]);
+G2L["2e"]["BorderSizePixel"] = 0;
+G2L["2e"]["BackgroundColor3"] = Color3.fromRGB(216, 41, 41);
+G2L["2e"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["2e"]["Size"] = UDim2.new(0.58824, 0, 1.42857, 0);
+G2L["2e"]["Position"] = UDim2.new(0.29412, 0, 0.5, 0);
+G2L["2e"]["Name"] = [[Knob]];
+-- Attributes
+G2L["2e"]:SetAttribute([[_lemonadeUniqueId]], [[VM6qmBtxVM6q]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.LowGravity.Switch.Knob.Corner
+G2L["2f"] = Instance.new("UICorner", G2L["2e"]);
+G2L["2f"]["Name"] = [[Corner]];
+G2L["2f"]["CornerRadius"] = UDim.new(1, 0);
+-- Attributes
+G2L["2f"]:SetAttribute([[_lemonadeUniqueId]], [[mlufHhNHmluf]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.SnakeMode
+G2L["30"] = Instance.new("TextLabel", G2L["6"]);
+G2L["30"]["LineHeight"] = 0.53;
+G2L["30"]["BorderSizePixel"] = 0;
+G2L["30"]["TextSize"] = 20;
+G2L["30"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["30"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["30"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["30"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["30"]["BackgroundTransparency"] = 1;
+G2L["30"]["Size"] = UDim2.new(0.81967, 0, 0.15205, 0);
+G2L["30"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["30"]["Text"] = [[ SNAKE MODE]];
+G2L["30"]["Name"] = [[SnakeMode]];
+G2L["30"]["Position"] = UDim2.new(0, 0, 0.326, 0);
+-- Attributes
+G2L["30"]:SetAttribute([[_lemonadeUniqueId]], [[ax9Hu9Ssax9H]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.SnakeMode.Switch
+G2L["31"] = Instance.new("TextButton", G2L["30"]);
+G2L["31"]["BorderSizePixel"] = 0;
+G2L["31"]["AutoButtonColor"] = false;
+G2L["31"]["BackgroundColor3"] = Color3.fromRGB(56, 13, 13);
+G2L["31"]["AnchorPoint"] = Vector2.new(1, 0.5);
+G2L["31"]["Size"] = UDim2.new(0.17, 0, 0.18415, 0);
+G2L["31"]["Text"] = [[]];
+G2L["31"]["Name"] = [[Switch]];
+G2L["31"]["Position"] = UDim2.new(1.185, 0, 0.5, 0);
+-- Attributes
+G2L["31"]:SetAttribute([[_lemonadeUniqueId]], [[c8Rs7pysc8Rs]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.SnakeMode.Switch.SwitchAnim
+G2L["32"] = Instance.new("LocalScript", G2L["31"]);
+G2L["32"]["Name"] = [[SwitchAnim]];
+-- Attributes
+G2L["32"]:SetAttribute([[_lemonadeUniqueId]], [[HazCdobNHazC]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.SnakeMode.Switch.Corner
+G2L["33"] = Instance.new("UICorner", G2L["31"]);
+G2L["33"]["Name"] = [[Corner]];
+G2L["33"]["CornerRadius"] = UDim.new(0, 9);
+-- Attributes
+G2L["33"]:SetAttribute([[_lemonadeUniqueId]], [[icOImjoGicOI]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.SnakeMode.Switch.Knob
+G2L["34"] = Instance.new("Frame", G2L["31"]);
+G2L["34"]["BorderSizePixel"] = 0;
+G2L["34"]["BackgroundColor3"] = Color3.fromRGB(216, 41, 41);
+G2L["34"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["34"]["Size"] = UDim2.new(0.58824, 0, 1.42857, 0);
+G2L["34"]["Position"] = UDim2.new(0.29412, 0, 0.5, 0);
+G2L["34"]["Name"] = [[Knob]];
+-- Attributes
+G2L["34"]:SetAttribute([[_lemonadeUniqueId]], [[Bvhwe3NtBvhw]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.SnakeMode.Switch.Knob.Corner
+G2L["35"] = Instance.new("UICorner", G2L["34"]);
+G2L["35"]["Name"] = [[Corner]];
+G2L["35"]["CornerRadius"] = UDim.new(1, 0);
+-- Attributes
+G2L["35"]:SetAttribute([[_lemonadeUniqueId]], [[budadHKGbuda]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.ThirdPersonView
+G2L["36"] = Instance.new("TextLabel", G2L["6"]);
+G2L["36"]["LineHeight"] = 0.53;
+G2L["36"]["BorderSizePixel"] = 0;
+G2L["36"]["TextSize"] = 20;
+G2L["36"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["36"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["36"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["36"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["36"]["BackgroundTransparency"] = 1;
+G2L["36"]["Size"] = UDim2.new(0.81967, 0, 0.15205, 0);
+G2L["36"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["36"]["Text"] = [[ THIRD PERSON VIEW]];
+G2L["36"]["Name"] = [[ThirdPersonView]];
+G2L["36"]["Position"] = UDim2.new(0, 0, 0.378, 0);
+-- Attributes
+G2L["36"]:SetAttribute([[_lemonadeUniqueId]], [[YPVixTAmYPVi]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.ThirdPersonView.Switch
+G2L["37"] = Instance.new("TextButton", G2L["36"]);
+G2L["37"]["BorderSizePixel"] = 0;
+G2L["37"]["AutoButtonColor"] = false;
+G2L["37"]["BackgroundColor3"] = Color3.fromRGB(56, 13, 13);
+G2L["37"]["AnchorPoint"] = Vector2.new(1, 0.5);
+G2L["37"]["Size"] = UDim2.new(0.17, 0, 0.18415, 0);
+G2L["37"]["Text"] = [[]];
+G2L["37"]["Name"] = [[Switch]];
+G2L["37"]["Position"] = UDim2.new(1.185, 0, 0.5, 0);
+-- Attributes
+G2L["37"]:SetAttribute([[_lemonadeUniqueId]], [[nw8J2iqinw8J]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.ThirdPersonView.Switch.SwitchAnim
+G2L["38"] = Instance.new("LocalScript", G2L["37"]);
+G2L["38"]["Name"] = [[SwitchAnim]];
+-- Attributes
+G2L["38"]:SetAttribute([[_lemonadeUniqueId]], [[GEFeej2SGEFe]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.ThirdPersonView.Switch.Corner
+G2L["39"] = Instance.new("UICorner", G2L["37"]);
+G2L["39"]["Name"] = [[Corner]];
+G2L["39"]["CornerRadius"] = UDim.new(0, 9);
+-- Attributes
+G2L["39"]:SetAttribute([[_lemonadeUniqueId]], [[uM23rW9vuM23]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.ThirdPersonView.Switch.Knob
+G2L["3a"] = Instance.new("Frame", G2L["37"]);
+G2L["3a"]["BorderSizePixel"] = 0;
+G2L["3a"]["BackgroundColor3"] = Color3.fromRGB(216, 41, 41);
+G2L["3a"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["3a"]["Size"] = UDim2.new(0.58824, 0, 1.42857, 0);
+G2L["3a"]["Position"] = UDim2.new(0.29412, 0, 0.5, 0);
+G2L["3a"]["Name"] = [[Knob]];
+-- Attributes
+G2L["3a"]:SetAttribute([[_lemonadeUniqueId]], [[iFwiMn5niFwi]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.ThirdPersonView.Switch.Knob.Corner
+G2L["3b"] = Instance.new("UICorner", G2L["3a"]);
+G2L["3b"]["Name"] = [[Corner]];
+G2L["3b"]["CornerRadius"] = UDim.new(1, 0);
+-- Attributes
+G2L["3b"]:SetAttribute([[_lemonadeUniqueId]], [[JLDlzojlJLDl]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.Jump
+G2L["3c"] = Instance.new("TextLabel", G2L["6"]);
+G2L["3c"]["LineHeight"] = 0.53;
+G2L["3c"]["BorderSizePixel"] = 0;
+G2L["3c"]["TextSize"] = 20;
+G2L["3c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["3c"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["3c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3c"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["3c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3c"]["BackgroundTransparency"] = 1;
+G2L["3c"]["RichText"] = true;
+G2L["3c"]["Size"] = UDim2.new(0.81967, 0, 0.26901, 0);
+G2L["3c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3c"]["Text"] = [[ JUMP MULTIPLIER: <font color="#4CD04B">16</font>]];
+G2L["3c"]["Name"] = [[Jump]];
+G2L["3c"]["Position"] = UDim2.new(0, 0, 0.75, 0);
+-- Attributes
+G2L["3c"]:SetAttribute([[_lemonadeUniqueId]], [[BmOLKj3hBmOL]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.Jump.SpeedSlider
+G2L["3d"] = Instance.new("LocalScript", G2L["3c"]);
+G2L["3d"]["Name"] = [[SpeedSlider]];
+-- Attributes
+G2L["3d"]:SetAttribute([[_lemonadeUniqueId]], [[fAg0cx9nfAg0]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.Jump.Track
+G2L["3e"] = Instance.new("Frame", G2L["3c"]);
+G2L["3e"]["BorderSizePixel"] = 0;
+G2L["3e"]["BackgroundColor3"] = Color3.fromRGB(59, 69, 83);
+G2L["3e"]["Size"] = UDim2.new(1.125, 0, 0.0223, 0);
+G2L["3e"]["Position"] = UDim2.new(0.045, 0, 0.20817, 0);
+G2L["3e"]["Name"] = [[Track]];
+-- Attributes
+G2L["3e"]:SetAttribute([[_lemonadeUniqueId]], [[e9cnpyBLe9cn]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.Jump.Track.Knob
+G2L["3f"] = Instance.new("Frame", G2L["3e"]);
+G2L["3f"]["ZIndex"] = 2;
+G2L["3f"]["BorderSizePixel"] = 0;
+G2L["3f"]["BackgroundColor3"] = Color3.fromRGB(134, 217, 223);
+G2L["3f"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["3f"]["Size"] = UDim2.new(0.06222, 0, 4.66667, 0);
+G2L["3f"]["Position"] = UDim2.new(0.10667, 0, 0.5, 0);
+G2L["3f"]["Name"] = [[Knob]];
+-- Attributes
+G2L["3f"]:SetAttribute([[_lemonadeUniqueId]], [[yBK7xVDJyBK7]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.Jump.Track.Knob.Corner
+G2L["40"] = Instance.new("UICorner", G2L["3f"]);
+G2L["40"]["Name"] = [[Corner]];
+G2L["40"]["CornerRadius"] = UDim.new(1, 0);
+-- Attributes
+G2L["40"]:SetAttribute([[_lemonadeUniqueId]], [[wN8OEbm2wN8O]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.PlayerEsp
+G2L["41"] = Instance.new("TextLabel", G2L["6"]);
+G2L["41"]["LineHeight"] = 0.53;
+G2L["41"]["BorderSizePixel"] = 0;
+G2L["41"]["TextSize"] = 20;
+G2L["41"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["41"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["41"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["41"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["41"]["BackgroundTransparency"] = 1;
+G2L["41"]["Size"] = UDim2.new(0.81967, 0, 0.15205, 0);
+G2L["41"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["41"]["Text"] = [[ PLAYER ESP]];
+G2L["41"]["Name"] = [[PlayerEsp]];
+G2L["41"]["Position"] = UDim2.new(0, 0, 0.43, 0);
+-- Attributes
+G2L["41"]:SetAttribute([[_lemonadeUniqueId]], [[4okx7hgW4okx]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.PlayerEsp.Switch
+G2L["42"] = Instance.new("TextButton", G2L["41"]);
+G2L["42"]["BorderSizePixel"] = 0;
+G2L["42"]["AutoButtonColor"] = false;
+G2L["42"]["BackgroundColor3"] = Color3.fromRGB(56, 13, 13);
+G2L["42"]["AnchorPoint"] = Vector2.new(1, 0.5);
+G2L["42"]["Size"] = UDim2.new(0.17, 0, 0.18415, 0);
+G2L["42"]["Text"] = [[]];
+G2L["42"]["Name"] = [[Switch]];
+G2L["42"]["Position"] = UDim2.new(1.185, 0, 0.5, 0);
+-- Attributes
+G2L["42"]:SetAttribute([[_lemonadeUniqueId]], [[5KENj6vl5KEN]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.PlayerEsp.Switch.SwitchAnim
+G2L["43"] = Instance.new("LocalScript", G2L["42"]);
+G2L["43"]["Name"] = [[SwitchAnim]];
+-- Attributes
+G2L["43"]:SetAttribute([[_lemonadeUniqueId]], [[DL5LyVzbDL5L]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.PlayerEsp.Switch.Corner
+G2L["44"] = Instance.new("UICorner", G2L["42"]);
+G2L["44"]["Name"] = [[Corner]];
+G2L["44"]["CornerRadius"] = UDim.new(0, 9);
+-- Attributes
+G2L["44"]:SetAttribute([[_lemonadeUniqueId]], [[mzJLZrUMmzJL]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.PlayerEsp.Switch.Knob
+G2L["45"] = Instance.new("Frame", G2L["42"]);
+G2L["45"]["BorderSizePixel"] = 0;
+G2L["45"]["BackgroundColor3"] = Color3.fromRGB(216, 41, 41);
+G2L["45"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["45"]["Size"] = UDim2.new(0.58824, 0, 1.42857, 0);
+G2L["45"]["Position"] = UDim2.new(0.29412, 0, 0.5, 0);
+G2L["45"]["Name"] = [[Knob]];
+-- Attributes
+G2L["45"]:SetAttribute([[_lemonadeUniqueId]], [[iKhrmjOQiKhr]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.PlayerEsp.Switch.Knob.Corner
+G2L["46"] = Instance.new("UICorner", G2L["45"]);
+G2L["46"]["Name"] = [[Corner]];
+G2L["46"]["CornerRadius"] = UDim.new(1, 0);
+-- Attributes
+G2L["46"]:SetAttribute([[_lemonadeUniqueId]], [[AQVG05MoAQVG]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.Xray
+G2L["47"] = Instance.new("TextLabel", G2L["6"]);
+G2L["47"]["LineHeight"] = 0.53;
+G2L["47"]["BorderSizePixel"] = 0;
+G2L["47"]["TextSize"] = 20;
+G2L["47"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["47"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["47"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["47"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["47"]["BackgroundTransparency"] = 1;
+G2L["47"]["Size"] = UDim2.new(0.81967, 0, 0.15205, 0);
+G2L["47"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["47"]["Text"] = [[ XRAY BLOCKS]];
+G2L["47"]["Name"] = [[Xray]];
+G2L["47"]["Position"] = UDim2.new(0, 0, 0.482, 0);
+-- Attributes
+G2L["47"]:SetAttribute([[_lemonadeUniqueId]], [[f8BJVK8Of8BJ]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.Xray.Switch
+G2L["48"] = Instance.new("TextButton", G2L["47"]);
+G2L["48"]["BorderSizePixel"] = 0;
+G2L["48"]["AutoButtonColor"] = false;
+G2L["48"]["BackgroundColor3"] = Color3.fromRGB(56, 13, 13);
+G2L["48"]["AnchorPoint"] = Vector2.new(1, 0.5);
+G2L["48"]["Size"] = UDim2.new(0.17, 0, 0.18415, 0);
+G2L["48"]["Text"] = [[]];
+G2L["48"]["Name"] = [[Switch]];
+G2L["48"]["Position"] = UDim2.new(1.185, 0, 0.5, 0);
+-- Attributes
+G2L["48"]:SetAttribute([[_lemonadeUniqueId]], [[bLTNb3x3bLTN]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.Xray.Switch.SwitchAnim
+G2L["49"] = Instance.new("LocalScript", G2L["48"]);
+G2L["49"]["Name"] = [[SwitchAnim]];
+-- Attributes
+G2L["49"]:SetAttribute([[_lemonadeUniqueId]], [[9amofFwO9amo]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.Xray.Switch.Corner
+G2L["4a"] = Instance.new("UICorner", G2L["48"]);
+G2L["4a"]["Name"] = [[Corner]];
+G2L["4a"]["CornerRadius"] = UDim.new(0, 9);
+-- Attributes
+G2L["4a"]:SetAttribute([[_lemonadeUniqueId]], [[XaccSoEEXacc]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.Xray.Switch.Knob
+G2L["4b"] = Instance.new("Frame", G2L["48"]);
+G2L["4b"]["BorderSizePixel"] = 0;
+G2L["4b"]["BackgroundColor3"] = Color3.fromRGB(216, 41, 41);
+G2L["4b"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["4b"]["Size"] = UDim2.new(0.58824, 0, 1.42857, 0);
+G2L["4b"]["Position"] = UDim2.new(0.29412, 0, 0.5, 0);
+G2L["4b"]["Name"] = [[Knob]];
+-- Attributes
+G2L["4b"]:SetAttribute([[_lemonadeUniqueId]], [[CP8c5Nm6CP8c]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.Xray.Switch.Knob.Corner
+G2L["4c"] = Instance.new("UICorner", G2L["4b"]);
+G2L["4c"]["Name"] = [[Corner]];
+G2L["4c"]["CornerRadius"] = UDim.new(1, 0);
+-- Attributes
+G2L["4c"]:SetAttribute([[_lemonadeUniqueId]], [[RLE3phXxRLE3]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.ClickTeleport
+G2L["4d"] = Instance.new("TextLabel", G2L["6"]);
+G2L["4d"]["LineHeight"] = 0.53;
+G2L["4d"]["BorderSizePixel"] = 0;
+G2L["4d"]["TextSize"] = 20;
+G2L["4d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["4d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4d"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4d"]["BackgroundTransparency"] = 1;
+G2L["4d"]["Size"] = UDim2.new(0.81967, 0, 0.15205, 0);
+G2L["4d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4d"]["Text"] = [[ CLICK TELEPORT]];
+G2L["4d"]["Name"] = [[ClickTeleport]];
+G2L["4d"]["Position"] = UDim2.new(0, 0, 0.534, 0);
+-- Attributes
+G2L["4d"]:SetAttribute([[_lemonadeUniqueId]], [[P6GLhWznP6GL]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.ClickTeleport.Switch
+G2L["4e"] = Instance.new("TextButton", G2L["4d"]);
+G2L["4e"]["BorderSizePixel"] = 0;
+G2L["4e"]["AutoButtonColor"] = false;
+G2L["4e"]["BackgroundColor3"] = Color3.fromRGB(56, 13, 13);
+G2L["4e"]["AnchorPoint"] = Vector2.new(1, 0.5);
+G2L["4e"]["Size"] = UDim2.new(0.17, 0, 0.18415, 0);
+G2L["4e"]["Text"] = [[]];
+G2L["4e"]["Name"] = [[Switch]];
+G2L["4e"]["Position"] = UDim2.new(1.185, 0, 0.5, 0);
+-- Attributes
+G2L["4e"]:SetAttribute([[_lemonadeUniqueId]], [[jlqZGgTpjlqZ]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.ClickTeleport.Switch.SwitchAnim
+G2L["4f"] = Instance.new("LocalScript", G2L["4e"]);
+G2L["4f"]["Name"] = [[SwitchAnim]];
+-- Attributes
+G2L["4f"]:SetAttribute([[_lemonadeUniqueId]], [[iYPq2g0siYPq]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.ClickTeleport.Switch.Corner
+G2L["50"] = Instance.new("UICorner", G2L["4e"]);
+G2L["50"]["Name"] = [[Corner]];
+G2L["50"]["CornerRadius"] = UDim.new(0, 9);
+-- Attributes
+G2L["50"]:SetAttribute([[_lemonadeUniqueId]], [[DUB1AQBpDUB1]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.ClickTeleport.Switch.Knob
+G2L["51"] = Instance.new("Frame", G2L["4e"]);
+G2L["51"]["BorderSizePixel"] = 0;
+G2L["51"]["BackgroundColor3"] = Color3.fromRGB(216, 41, 41);
+G2L["51"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["51"]["Size"] = UDim2.new(0.58824, 0, 1.42857, 0);
+G2L["51"]["Position"] = UDim2.new(0.29412, 0, 0.5, 0);
+G2L["51"]["Name"] = [[Knob]];
+-- Attributes
+G2L["51"]:SetAttribute([[_lemonadeUniqueId]], [[eDJO2jVReDJO]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.ClickTeleport.Switch.Knob.Corner
+G2L["52"] = Instance.new("UICorner", G2L["51"]);
+G2L["52"]["Name"] = [[Corner]];
+G2L["52"]["CornerRadius"] = UDim.new(1, 0);
+-- Attributes
+G2L["52"]:SetAttribute([[_lemonadeUniqueId]], [[Qf1NNZM6Qf1N]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.LockFov
+G2L["53"] = Instance.new("TextLabel", G2L["6"]);
+G2L["53"]["LineHeight"] = 0.53;
+G2L["53"]["BorderSizePixel"] = 0;
+G2L["53"]["TextSize"] = 20;
+G2L["53"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["53"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["53"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["53"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["53"]["BackgroundTransparency"] = 1;
+G2L["53"]["Size"] = UDim2.new(0.81967, 0, 0.15205, 0);
+G2L["53"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["53"]["Text"] = [[ LOCK FOV]];
+G2L["53"]["Name"] = [[LockFov]];
+G2L["53"]["Position"] = UDim2.new(0, 0, 0.586, 0);
+-- Attributes
+G2L["53"]:SetAttribute([[_lemonadeUniqueId]], [[P6GLhWznP6GL]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.LockFov.Switch
+G2L["54"] = Instance.new("TextButton", G2L["53"]);
+G2L["54"]["BorderSizePixel"] = 0;
+G2L["54"]["AutoButtonColor"] = false;
+G2L["54"]["BackgroundColor3"] = Color3.fromRGB(56, 13, 13);
+G2L["54"]["AnchorPoint"] = Vector2.new(1, 0.5);
+G2L["54"]["Size"] = UDim2.new(0.17, 0, 0.18415, 0);
+G2L["54"]["Text"] = [[]];
+G2L["54"]["Name"] = [[Switch]];
+G2L["54"]["Position"] = UDim2.new(1.185, 0, 0.5, 0);
+-- Attributes
+G2L["54"]:SetAttribute([[_lemonadeUniqueId]], [[jlqZGgTpjlqZ]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.LockFov.Switch.SwitchAnim
+G2L["55"] = Instance.new("LocalScript", G2L["54"]);
+G2L["55"]["Name"] = [[SwitchAnim]];
+-- Attributes
+G2L["55"]:SetAttribute([[_lemonadeUniqueId]], [[iYPq2g0siYPq]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.LockFov.Switch.Corner
+G2L["56"] = Instance.new("UICorner", G2L["54"]);
+G2L["56"]["Name"] = [[Corner]];
+G2L["56"]["CornerRadius"] = UDim.new(0, 9);
+-- Attributes
+G2L["56"]:SetAttribute([[_lemonadeUniqueId]], [[DUB1AQBpDUB1]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.LockFov.Switch.Knob
+G2L["57"] = Instance.new("Frame", G2L["54"]);
+G2L["57"]["BorderSizePixel"] = 0;
+G2L["57"]["BackgroundColor3"] = Color3.fromRGB(216, 41, 41);
+G2L["57"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["57"]["Size"] = UDim2.new(0.58824, 0, 1.42857, 0);
+G2L["57"]["Position"] = UDim2.new(0.29412, 0, 0.5, 0);
+G2L["57"]["Name"] = [[Knob]];
+-- Attributes
+G2L["57"]:SetAttribute([[_lemonadeUniqueId]], [[eDJO2jVReDJO]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.LockFov.Switch.Knob.Corner
+G2L["58"] = Instance.new("UICorner", G2L["57"]);
+G2L["58"]["Name"] = [[Corner]];
+G2L["58"]["CornerRadius"] = UDim.new(1, 0);
+-- Attributes
+G2L["58"]:SetAttribute([[_lemonadeUniqueId]], [[Qf1NNZM6Qf1N]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.TextLabel
+G2L["59"] = Instance.new("TextLabel", G2L["4"]);
+G2L["59"]["TextWrapped"] = true;
+G2L["59"]["BorderSizePixel"] = 0;
+G2L["59"]["TextSize"] = 12;
+G2L["59"]["BackgroundColor3"] = Color3.fromRGB(178, 0, 4);
+G2L["59"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["59"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["59"]["Size"] = UDim2.new(1, 0, 0.092, 0);
+G2L["59"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["59"]["Text"] = [[https://github.com/T1mohDev/T1Hub - Best script]];
+G2L["59"]["Position"] = UDim2.new(0, 0, 0.024, 0);
+-- Attributes
+G2L["59"]:SetAttribute([[_lemonadeUniqueId]], [[01tfO3jp01tf]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.Close
+G2L["5a"] = Instance.new("TextButton", G2L["4"]);
+G2L["5a"]["BorderSizePixel"] = 0;
+G2L["5a"]["TextSize"] = 14;
+G2L["5a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5a"]["BackgroundColor3"] = Color3.fromRGB(34, 3, 67);
+G2L["5a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["5a"]["Size"] = UDim2.new(0.5, 0, 0.2, 0);
+G2L["5a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5a"]["Text"] = [[❌]];
+G2L["5a"]["Name"] = [[Close]];
+G2L["5a"]["Position"] = UDim2.new(0.5, 0, 0.8, 0);
+-- Attributes
+G2L["5a"]:SetAttribute([[_lemonadeUniqueId]], [[MyFlkdzfMyFl]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.FullHide
+G2L["5b"] = Instance.new("TextButton", G2L["4"]);
+G2L["5b"]["BorderSizePixel"] = 0;
+G2L["5b"]["TextSize"] = 14;
+G2L["5b"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5b"]["BackgroundColor3"] = Color3.fromRGB(34, 3, 67);
+G2L["5b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["5b"]["Size"] = UDim2.new(0.5, 0, 0.2, 0);
+G2L["5b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5b"]["Text"] = [[⛔]];
+G2L["5b"]["Name"] = [[FullHide]];
+G2L["5b"]["Position"] = UDim2.new(0, 0, 0.8, 0);
+-- Attributes
+G2L["5b"]:SetAttribute([[_lemonadeUniqueId]], [[d98uz3Dbd98u]]);
+
+
+-- ServerStorage.ModMenu.MainFrame.FullHide.CloseScript
+G2L["5c"] = Instance.new("LocalScript", G2L["5b"]);
+G2L["5c"]["Name"] = [[CloseScript]];
+-- Attributes
+G2L["5c"]:SetAttribute([[_lemonadeUniqueId]], [[3CTFDIAVCRHF]]);
+
+
+-- ServerStorage.ModMenu.OpenCloseButton
+G2L["5d"] = Instance.new("TextButton", G2L["1"]);
+G2L["5d"]["TextWrapped"] = true;
+G2L["5d"]["BorderSizePixel"] = 0;
+G2L["5d"]["TextSize"] = 37;
+G2L["5d"]["TextColor3"] = Color3.fromRGB(250, 250, 250);
+G2L["5d"]["BackgroundColor3"] = Color3.fromRGB(0, 4, 69);
+G2L["5d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["5d"]["Size"] = UDim2.new(0.04198, 0, 0.06242, 0);
+G2L["5d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5d"]["Text"] = [[T1]];
+G2L["5d"]["Name"] = [[OpenCloseButton]];
+G2L["5d"]["Position"] = UDim2.new(0.03612, 0, 0.17603, 0);
+-- Attributes
+G2L["5d"]:SetAttribute([[_lemonadeUniqueId]], [[R6dvkeyER6dv]]);
+
+
+-- ServerStorage.ModMenu.OpenCloseButton.DragScript
+G2L["5e"] = Instance.new("LocalScript", G2L["5d"]);
 -- [ERROR] cannot convert Capabilities, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["25"]["Sandboxed"] = true;
-G2L["25"]["Name"] = [[DragScript]];
+G2L["5e"]["Sandboxed"] = true;
+G2L["5e"]["Name"] = [[DragScript]];
 -- Attributes
-G2L["25"]:SetAttribute([[_lemonadeUniqueId]], [[CP64AMGAL7A7]]);
+G2L["5e"]:SetAttribute([[_lemonadeUniqueId]], [[ZWPA5QPY3E7O]]);
 
 
--- StarterGui.ModMenu.OpenCloseButton
-G2L["26"] = Instance.new("TextButton", G2L["1"]);
-G2L["26"]["TextWrapped"] = true;
-G2L["26"]["BorderSizePixel"] = 0;
-G2L["26"]["TextSize"] = 37;
-G2L["26"]["TextColor3"] = Color3.fromRGB(250, 250, 250);
-G2L["26"]["BackgroundColor3"] = Color3.fromRGB(0, 4, 69);
-G2L["26"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["26"]["Size"] = UDim2.new(0, 50, 0, 50);
-G2L["26"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["26"]["Text"] = [[T1]];
-G2L["26"]["Name"] = [[OpenCloseButton]];
-G2L["26"]["Position"] = UDim2.new(0.04706, 0, 0.01248, 0);
+-- ServerStorage.ModMenu.Toast
+G2L["5f"] = Instance.new("TextLabel", G2L["1"]);
+G2L["5f"]["TextWrapped"] = true;
+G2L["5f"]["BorderSizePixel"] = 0;
+G2L["5f"]["TextSize"] = 26;
+G2L["5f"]["BackgroundColor3"] = Color3.fromRGB(57, 49, 49);
+G2L["5f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["5f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5f"]["AnchorPoint"] = Vector2.new(0.5, 1);
+G2L["5f"]["Size"] = UDim2.new(0.11755, 0, 0.05493, 0);
+G2L["5f"]["Visible"] = false;
+G2L["5f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5f"]["Text"] = [[Fly Enabled]];
+G2L["5f"]["AutomaticSize"] = Enum.AutomaticSize.XY;
+G2L["5f"]["Name"] = [[Toast]];
+G2L["5f"]["Position"] = UDim2.new(0.5, 0, 0.88764, 0);
 -- Attributes
-G2L["26"]:SetAttribute([[_lemonadeUniqueId]], [[R6dvkeyER6dv]]);
+G2L["5f"]:SetAttribute([[_lemonadeUniqueId]], [[rekoynPHreko]]);
 
 
--- StarterGui.ModMenu.OpenCloseButton.DragScript
-G2L["27"] = Instance.new("LocalScript", G2L["26"]);
--- [ERROR] cannot convert Capabilities, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["27"]["Sandboxed"] = true;
-G2L["27"]["Name"] = [[DragScript]];
+-- ServerStorage.ModMenu.Toast.UICorner
+G2L["60"] = Instance.new("UICorner", G2L["5f"]);
+G2L["60"]["CornerRadius"] = UDim.new(1, 0);
 -- Attributes
-G2L["27"]:SetAttribute([[_lemonadeUniqueId]], [[ZWPA5QPY3E7O]]);
+G2L["60"]:SetAttribute([[_lemonadeUniqueId]], [[viKth8rlviKt]]);
 
 
--- StarterGui.ModMenu.MainFrame.ScrollingFrame.FlySuper.Switch.SwitchAnim
-local function C_6()
-local script = G2L["6"];
+-- ServerStorage.ModMenu.Toast.UIPadding
+G2L["61"] = Instance.new("UIPadding", G2L["5f"]);
+G2L["61"]["PaddingTop"] = UDim.new(0, 8);
+G2L["61"]["PaddingRight"] = UDim.new(0, 14);
+G2L["61"]["PaddingLeft"] = UDim.new(0, 14);
+G2L["61"]["PaddingBottom"] = UDim.new(0, 8);
+-- Attributes
+G2L["61"]:SetAttribute([[_lemonadeUniqueId]], [[RlpmgrzDRlpm]]);
+
+
+-- ServerStorage.ModMenu.Toast.UISizeConstraint
+G2L["62"] = Instance.new("UISizeConstraint", G2L["5f"]);
+G2L["62"]["MaxSize"] = Vector2.new(420, 1000);
+-- Attributes
+G2L["62"]:SetAttribute([[_lemonadeUniqueId]], [[sGIvx78csGIv]]);
+
+
+-- Require G2L wrapper
+local G2L_REQUIRE = require;
+local G2L_MODULES = {};
+local function require(Module:ModuleScript)
+    local ModuleState = G2L_MODULES[Module];
+    if ModuleState then
+        if not ModuleState.Required then
+            ModuleState.Required = true;
+            ModuleState.Value = ModuleState.Closure();
+        end
+        return ModuleState.Value;
+    end;
+    return G2L_REQUIRE(Module);
+end
+
+G2L_MODULES[G2L["2"]] = {
+Closure = function()
+    local script = G2L["2"];local TweenService = game:GetService("TweenService")
+
+local toast = script.Parent:WaitForChild("Toast")
+
+local APPEAR_TIME = 0.5 -- появление
+local HOLD_TIME = 0.85 -- удержание
+local FADE_TIME = 0.7 -- исчезновение
+
+local currentToken = 0
+
+-- Показывает тост с текстом message.
+-- Если тост уже виден — заменяет текст и перезапускает анимацию.
+local function showToast(message: string)
+	currentToken += 1
+	local token = currentToken
+
+	toast.Text = message
+	toast.Visible = true
+	-- стартовое состояние: полностью прозрачная
+	toast.TextTransparency = 1
+	toast.BackgroundTransparency = 1
+
+	-- появление: прозрачность -> 0, небольшой подъём вверх
+	local appearInfo = TweenInfo.new(APPEAR_TIME, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	local appearTween = TweenService:Create(toast, appearInfo, {
+		TextTransparency = 0,
+		BackgroundTransparency = 0,
+	})
+	appearTween:Play()
+
+	task.delay(HOLD_TIME + APPEAR_TIME, function()
+		-- если за это время показали новый тост — не трогаем старый
+		if token ~= currentToken then
+			return
+		end
+		local fadeInfo = TweenInfo.new(FADE_TIME, Enum.EasingStyle.Quad, Enum.EasingDirection.In)
+		local fadeTween = TweenService:Create(toast, fadeInfo, {
+			TextTransparency = 1,
+			BackgroundTransparency = 1,
+		})
+		fadeTween:Play()
+		fadeTween.Completed:Wait()
+		if token == currentToken then
+			toast.Visible = false
+		end
+	end)
+end
+
+return {
+	show = showToast,
+}
+end;
+};
+-- ServerStorage.ModMenu.ClickSound
+local function C_3()
+local script = G2L["3"];
+	local Players = game:GetService("Players")
+	local UserInputService = game:GetService("UserInputService")
+	
+	local player = Players.LocalPlayer
+	local playerGui = player:WaitForChild("PlayerGui")
+	local modMenu = script.Parent
+	
+	local SOUND_ID = "rbxassetid://131060925555242"
+	local SOUND_VOLUME = 1
+	local DEBOUNCE = 0.15 -- звук успевает прозвучать целиком, не обрывается на середине
+	
+	local lastPlay = 0
+	
+	-- ОДИН переиспользуемый звук: просто перезапускаем его при нажатии.
+	-- Никаких создаваемых на лету инстансов — нечему накладываться.
+	local clickSound = Instance.new("Sound")
+	clickSound.SoundId = SOUND_ID
+	clickSound.Volume = SOUND_VOLUME
+	clickSound.Parent = game:GetService("SoundService")
+	
+	local function playClick()
+		local now = os.clock()
+		if now - lastPlay < DEBOUNCE then
+			return
+		end
+		lastPlay = now
+		clickSound.TimePosition = 0
+		clickSound:Play()
+	end
+	
+	-- Проверяем, находится ли элемент под курсором/пальцем внутри нашего меню
+	-- и является ли он интерактивным (кнопка или ползунок).
+	local function isInteractive(instance)
+		if not instance:IsDescendantOf(modMenu) then
+			return false
+		end
+		if instance:IsA("GuiButton") then
+			return true
+		end
+		return instance.Name == "Track" or instance.Name == "Knob"
+	end
+	
+	-- Один общий обработчик на все нажатия: находим, что находится под точкой
+	-- нажатия, и проигрываем звук ОДИН раз, сколько бы кнопок там ни было
+	-- наложено друг на друга.
+	UserInputService.InputBegan:Connect(function(input, gameProcessed)
+		if input.UserInputType ~= Enum.UserInputType.MouseButton1 and input.UserInputType ~= Enum.UserInputType.Touch then
+			return
+		end
+		local guis = playerGui:GetGuiObjectsAtPosition(input.Position.X, input.Position.Y)
+		for _, gui in guis do
+			if isInteractive(gui) then
+				playClick()
+				return
+			end
+		end
+	end)
+end;
+task.spawn(C_3);
+-- ServerStorage.ModMenu.MainFrame.DragScript
+local function C_5()
+local script = G2L["5"];
+	--Not made by me, check out this video: https://www.youtube.com/watch?v=z25nyNBG7Js&t=22s
+	--Put this inside of your Frame and configure the speed if you would like.
+	--Enjoy! Credits go to: https://www.youtube.com/watch?v=z25nyNBG7Js&t=22s
+	
+	local UIS = game:GetService('UserInputService')
+	local TweenService = game:GetService('TweenService')
+	local frame = script.Parent
+	local dragBar = frame:WaitForChild('TextLabel')
+	local dragToggle = nil
+	local dragSpeed = 0
+	local dragStart = nil
+	local startPos = nil
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		TweenService:Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+	
+	dragBar.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+	
+end;
+task.spawn(C_5);
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.FlySuper.Switch.SwitchAnim
+local function C_9()
+local script = G2L["9"];
 	-- LEMONADE_UI_SCALE_CONVERTER (managed by Lemonade, do not edit or remove)
 	-- Pixel (Offset) values in Lemonade UIs are authored for a 1920x1080 screen.
 	-- This multiplies every pixel value under the ScreenGuis this script sees by
@@ -631,10 +1473,14 @@ local script = G2L["6"];
 	local FLY_SPEED = 60
 	
 	local player = Players.LocalPlayer
+	local toast = require(script:FindFirstAncestor("ModMenu"):WaitForChild("ToastManager"))
 	local state = false
 	local flying = false
 	local bodyVelocity = nil
 	local bodyGyro = nil
+	local renderConn = nil
+	local diedConn = nil
+	local updateFly
 	local keys = {
 		W = false,
 		A = false,
@@ -659,6 +1505,14 @@ local script = G2L["6"];
 	
 	local function stopFly()
 		flying = false
+		if renderConn then
+			renderConn:Disconnect()
+			renderConn = nil
+		end
+		if diedConn then
+			diedConn:Disconnect()
+			diedConn = nil
+		end
 		if bodyVelocity then
 			bodyVelocity:Destroy()
 			bodyVelocity = nil
@@ -693,7 +1547,12 @@ local script = G2L["6"];
 		bodyGyro.CFrame = hrp.CFrame
 		bodyGyro.Parent = hrp
 	
-		humanoid.Died:Connect(stopFly)
+		diedConn = humanoid.Died:Connect(stopFly)
+		renderConn = RunService.RenderStepped:Connect(function()
+			if flying then
+				updateFly()
+			end
+		end)
 	end
 	
 	UserInputService.InputBegan:Connect(function(input, gameProcessed)
@@ -713,11 +1572,7 @@ local script = G2L["6"];
 		end
 	end)
 	
-	RunService.RenderStepped:Connect(function()
-		if not flying then
-			return
-		end
-	
+	updateFly = function()
 		local character, humanoid, hrp = getCharacter()
 		if not character then
 			stopFly()
@@ -728,6 +1583,7 @@ local script = G2L["6"];
 		local look = camera.CFrame.LookVector
 		local right = camera.CFrame.RightVector
 	
+		-- Оригинальная логика из референса: WASD относительно камеры.
 		local moveDir = Vector3.zero
 		if keys.W then
 			moveDir += look
@@ -741,7 +1597,13 @@ local script = G2L["6"];
 		if keys.A then
 			moveDir -= right
 		end
-		if keys.Space then
+		-- Мобильная адаптация: если клавиши не нажаты — берём направление
+		-- из джойстика (Humanoid.MoveDirection обновляется и в полёте).
+		if moveDir.Magnitude == 0 and humanoid.MoveDirection.Magnitude > 0 then
+			moveDir = humanoid.MoveDirection
+		end
+		-- Вверх: Space на ПК или кнопка прыжка на телефоне (humanoid.Jump)
+		if keys.Space or humanoid.Jump then
 			moveDir += Vector3.new(0, 1, 0)
 		end
 		if keys.LeftShift then
@@ -758,7 +1620,7 @@ local script = G2L["6"];
 		if bodyGyro then
 			bodyGyro.CFrame = camera.CFrame
 		end
-	end)
+	end
 	
 	-- Если персонаж умер или переспавнился — сбрасываем состояние полёта
 	player.CharacterAdded:Connect(function()
@@ -778,6 +1640,7 @@ local script = G2L["6"];
 		else
 			stopFly()
 		end
+		toast.show(state and "Fly Enabled" or "Fly Disabled")
 		print("[Switch] FlySuper toggled to", state)
 	end)
 	
@@ -791,18 +1654,20 @@ local script = G2L["6"];
 		if mainFrame and openButton then
 			mainFrame:WaitForChild("Close").Activated:Connect(function()
 				mainFrame.Visible = false
+				toast.show("T1mohD3v")
 			end)
 			openButton.Activated:Connect(function()
 				mainFrame.Visible = not mainFrame.Visible
+				toast.show("T1mohD3v")
 			end)
 			print("[ModMenu] Open/Close wired")
 		end
 	end
 end;
-task.spawn(C_6);
--- StarterGui.ModMenu.MainFrame.ScrollingFrame.MultiJumps.Switch.SwitchAnim
-local function C_c()
-local script = G2L["c"];
+task.spawn(C_9);
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.MultiJumps.Switch.SwitchAnim
+local function C_f()
+local script = G2L["f"];
 	-- LEMONADE_UI_SCALE_CONVERTER (managed by Lemonade, do not edit or remove)
 	-- Pixel (Offset) values in Lemonade UIs are authored for a 1920x1080 screen.
 	-- This multiplies every pixel value under the ScreenGuis this script sees by
@@ -961,8 +1826,11 @@ local script = G2L["c"];
 	local INFO = TweenInfo.new(0.18, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
 	
 	local player = Players.LocalPlayer
+	local toast = require(script:FindFirstAncestor("ModMenu"):WaitForChild("ToastManager"))
 	local state = false
 	local jumpConn = nil
+	local lastJumpTime = 0
+	local JUMP_COOLDOWN = 0.05
 	
 	local function stopInfiniteJumps()
 		if jumpConn then
@@ -973,18 +1841,19 @@ local script = G2L["c"];
 	
 	local function startInfiniteJumps()
 		stopInfiniteJumps()
-		-- Бесконечные прыжки: при нажатии Space в воздухе —
-		-- прыгаем снова, сколько угодно раз (как в референсном скрипте).
-		jumpConn = UserInputService.InputBegan:Connect(function(input, gameProcessed)
-			if gameProcessed then
+		-- JumpRequest срабатывает ровно один раз на нажатие: и от Space на ПК,
+		-- и от кнопки прыжка на телефоне. Задержка 0.05с защищает от
+		-- случайного двойного срабатывания.
+		jumpConn = UserInputService.JumpRequest:Connect(function()
+			local now = os.clock()
+			if now - lastJumpTime < JUMP_COOLDOWN then
 				return
 			end
-			if input.KeyCode == Enum.KeyCode.Space then
-				local character = player.Character
-				local humanoid = character and character:FindFirstChildOfClass("Humanoid")
-				if humanoid and humanoid.Health > 0 then
-					humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
-				end
+			local character = player.Character
+			local humanoid = character and character:FindFirstChildOfClass("Humanoid")
+			if humanoid and humanoid.Health > 0 then
+				humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+				lastJumpTime = now
 			end
 		end)
 	end
@@ -1002,13 +1871,14 @@ local script = G2L["c"];
 		else
 			stopInfiniteJumps()
 		end
+		toast.show(state and "Infinite Jumps Enabled" or "Infinite Jumps Disabled")
 		print("[Switch] InfiniteJumps toggled to", state)
 	end)
 end;
-task.spawn(C_c);
--- StarterGui.ModMenu.MainFrame.ScrollingFrame.WallHack.Switch.SwitchAnim
-local function C_12()
-local script = G2L["12"];
+task.spawn(C_f);
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.WallHack.Switch.SwitchAnim
+local function C_15()
+local script = G2L["15"];
 	-- LEMONADE_UI_SCALE_CONVERTER (managed by Lemonade, do not edit or remove)
 	-- Pixel (Offset) values in Lemonade UIs are authored for a 1920x1080 screen.
 	-- This multiplies every pixel value under the ScreenGuis this script sees by
@@ -1167,6 +2037,7 @@ local script = G2L["12"];
 	local INFO = TweenInfo.new(0.18, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
 	
 	local player = Players.LocalPlayer
+	local toast = require(script:FindFirstAncestor("ModMenu"):WaitForChild("ToastManager"))
 	local state = false
 	local noclipConn = nil
 	
@@ -1206,16 +2077,17 @@ local script = G2L["12"];
 		else
 			stopNoclip()
 		end
+		toast.show(state and "Noclip Enabled" or "Noclip Disabled")
 		print("[Switch] Noclip toggled to", state)
 	end)
 	
 	-- После респавна ноуклип продолжает работать:
 	-- цикл Heartbeat сам подхватывает части нового персонажа.
 end;
-task.spawn(C_12);
--- StarterGui.ModMenu.MainFrame.ScrollingFrame.Helicopter.Switch.SwitchAnim
-local function C_18()
-local script = G2L["18"];
+task.spawn(C_15);
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.Helicopter.Switch.SwitchAnim
+local function C_1b()
+local script = G2L["1b"];
 	-- LEMONADE_UI_SCALE_CONVERTER (managed by Lemonade, do not edit or remove)
 	-- Pixel (Offset) values in Lemonade UIs are authored for a 1920x1080 screen.
 	-- This multiplies every pixel value under the ScreenGuis this script sees by
@@ -1379,6 +2251,7 @@ local script = G2L["18"];
 	local HEIGHT_GAIN = 30 -- насколько быстро возвращается к нужной высоте
 	
 	local player = Players.LocalPlayer
+	local toast = require(script:FindFirstAncestor("ModMenu"):WaitForChild("ToastManager"))
 	local state = false
 	local heliConn = nil
 	local baseHeight = nil -- высота, на которой зависает игрок
@@ -1453,6 +2326,7 @@ local script = G2L["18"];
 		else
 			stopHelicopter()
 		end
+		toast.show(state and "Helicopter Enabled" or "Helicopter Disabled")
 		print("[Switch] Helicopter toggled to", state)
 	end)
 	
@@ -1464,8 +2338,8 @@ local script = G2L["18"];
 		end
 	end)
 end;
-task.spawn(C_18);
--- StarterGui.ModMenu.MainFrame.ScrollingFrame.Speed.SpeedSlider
+task.spawn(C_1b);
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.Speed.SpeedSlider
 local function C_20()
 local script = G2L["20"];
 	local Players = game:GetService("Players")
@@ -1575,63 +2449,2122 @@ local script = G2L["20"];
 	end)
 end;
 task.spawn(C_20);
--- StarterGui.ModMenu.MainFrame.FullHide.CloseScript
-local function C_24()
-local script = G2L["24"];
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.Spin.Switch.SwitchAnim
+local function C_26()
+local script = G2L["26"];
+	-- LEMONADE_UI_SCALE_CONVERTER (managed by Lemonade, do not edit or remove)
+	-- Pixel (Offset) values in Lemonade UIs are authored for a 1920x1080 screen.
+	-- This multiplies every pixel value under the ScreenGuis this script sees by
+	-- the fit of that reference inside the current viewport, so phones and
+	-- tablets show the desktop layout scaled down instead of desktop-sized pixels.
+	-- Scale fractions already follow the screen and stay as they are.
+	local lemonadeUiScale_REFERENCE = Vector2.new(1920, 1080)
+	local lemonadeUiScale_ATTRIBUTE_PREFIX = "LemonadeUiScale_"
+	-- Roblox sizes its own PlayerGui ScreenGuis (touch controls, prompts, chat,
+	-- freecam) for the device already.
+	local lemonadeUiScale_ROBLOX_SCREEN_GUIS = {
+		TouchGui = true,
+		ProximityPrompts = true,
+		Chat = true,
+		BubbleChat = true,
+		Freecam = true,
+	}
+	local lemonadeUiScale_PIXEL_PROPERTIES = {
+		GuiObject = { "Size", "Position" },
+		TextLabel = { "TextSize" },
+		TextButton = { "TextSize" },
+		TextBox = { "TextSize" },
+		ImageLabel = { "TileSize" },
+		ImageButton = { "TileSize" },
+		ScrollingFrame = { "CanvasSize", "ScrollBarThickness" },
+		UIStroke = { "Thickness" },
+		UICorner = { "CornerRadius" },
+		UIPadding = { "PaddingLeft", "PaddingRight", "PaddingTop", "PaddingBottom" },
+		UIListLayout = { "Padding" },
+		UIPageLayout = { "Padding" },
+		UITableLayout = { "Padding" },
+		UIGridLayout = { "CellSize", "CellPadding" },
+		UISizeConstraint = { "MinSize", "MaxSize" },
+		UITextSizeConstraint = { "MinTextSize", "MaxTextSize" },
+	}
+	
+	local function lemonadeUiScale_factor(viewport: Vector2): number
+		return math.min(viewport.X / lemonadeUiScale_REFERENCE.X, viewport.Y / lemonadeUiScale_REFERENCE.Y)
+	end
+	
+	local function lemonadeUiScale_scaleValue(value: any, factor: number): any
+		local kind = typeof(value)
+		if kind == "UDim" then
+			return UDim.new(value.Scale, math.round(value.Offset * factor))
+		end
+		if kind == "UDim2" then
+			return UDim2.new(
+				value.X.Scale,
+				math.round(value.X.Offset * factor),
+				value.Y.Scale,
+				math.round(value.Y.Offset * factor)
+			)
+		end
+		return value * factor
+	end
+	
+	-- The authored value is kept as an attribute so repeat passes, clones and
+	-- viewport changes always scale from it and never compound or drift.
+	local function lemonadeUiScale_apply(instance: Instance, factor: number)
+		local target = instance :: any
+		for className, properties in lemonadeUiScale_PIXEL_PROPERTIES do
+			if not instance:IsA(className) then
+				continue
+			end
+			for _, property in properties do
+				local attribute = lemonadeUiScale_ATTRIBUTE_PREFIX .. property
+				local authored = instance:GetAttribute(attribute)
+				if authored == nil then
+					authored = target[property]
+					if lemonadeUiScale_scaleValue(authored, 2) == authored then
+						continue
+					end
+					instance:SetAttribute(attribute, authored)
+				end
+				target[property] = lemonadeUiScale_scaleValue(authored, factor)
+			end
+		end
+	end
+	
+	local function lemonadeUiScale_hasOwnScale(screenGui: ScreenGui): boolean
+		for _, descendant in screenGui:GetDescendants() do
+			if descendant:IsA("UIScale") and not descendant.Parent:IsA("GuiButton") then
+				return true
+			end
+		end
+		return false
+	end
+	
+	local function lemonadeUiScale_shouldScale(screenGui: ScreenGui): boolean
+		return not lemonadeUiScale_ROBLOX_SCREEN_GUIS[screenGui.Name] and not lemonadeUiScale_hasOwnScale(screenGui)
+	end
+	
+	local function lemonadeUiScale_convert(screenGui: ScreenGui, factor: number)
+		-- A UIScale is the tree's own responsiveness; scaling pixels as well
+		-- would shrink it twice.
+		if not lemonadeUiScale_shouldScale(screenGui) then
+			return
+		end
+		for _, descendant in screenGui:GetDescendants() do
+			lemonadeUiScale_apply(descendant, factor)
+		end
+	end
+	
+	local lemonadeUiScale_RunService = game:GetService("RunService")
+	if lemonadeUiScale_RunService:IsRunning() and lemonadeUiScale_RunService:IsClient() then
+		local playerGui = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
+		local camera = workspace.CurrentCamera
+		local managed: { [ScreenGui]: boolean } = setmetatable({}, { __mode = "k" }) :: any
+		local function currentFactor(): number
+			return lemonadeUiScale_factor(camera.ViewportSize)
+		end
+		playerGui.ChildAdded:Connect(function(child)
+			if not child:IsA("ScreenGui") then
+				return
+			end
+			task.defer(function()
+				lemonadeUiScale_RunService.RenderStepped:Wait()
+				if not lemonadeUiScale_shouldScale(child) then
+					return
+				end
+				managed[child] = true
+				lemonadeUiScale_convert(child, currentFactor())
+				-- Deferred so properties the builder sets right after parenting are
+				-- read as authored.
+				child.DescendantAdded:Connect(function(descendant)
+					task.defer(function()
+						if descendant:IsDescendantOf(child) then
+							lemonadeUiScale_apply(descendant, currentFactor())
+						end
+					end)
+				end)
+			end)
+		end)
+		camera:GetPropertyChangedSignal("ViewportSize"):Connect(function()
+			local factor = currentFactor()
+			for screenGui in managed do
+				lemonadeUiScale_convert(screenGui, factor)
+			end
+		end)
+	end
+	-- END LEMONADE_UI_SCALE_CONVERTER
+	
+	local TweenService = game:GetService("TweenService")
+	local RunService = game:GetService("RunService")
+	local Players = game:GetService("Players")
+	
+	local button = script.Parent
+	local knob = button:WaitForChild("Knob")
+	
+	local TRACK_OFF = Color3.fromRGB(55, 12, 12)
+	local TRACK_ON = Color3.fromRGB(12, 55, 15)
+	local KNOB_OFF = Color3.fromRGB(215, 40, 40)
+	local KNOB_ON = Color3.fromRGB(55, 200, 45)
+	local OFF_POS = UDim2.new(0, 10, 0.5, 0)
+	local ON_POS = UDim2.new(0, 24, 0.5, 0)
+	local INFO = TweenInfo.new(0.18, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	local SPIN_SPEED = 20 -- скорость вращения вокруг оси Y (рад/с)
+	
+	local player = Players.LocalPlayer
+	local toast = require(script:FindFirstAncestor("ModMenu"):WaitForChild("ToastManager"))
+	local state = false
+	local spinConn = nil
+	
+	local function stopSpin()
+		if spinConn then
+			spinConn:Disconnect()
+			spinConn = nil
+		end
+		local character = player.Character
+		local hrp = character and character:FindFirstChild("HumanoidRootPart")
+		if hrp then
+			hrp.AssemblyAngularVelocity = Vector3.zero
+		end
+	end
+	
+	local function startSpin()
+		stopSpin()
+		-- Юла: персонаж крутится вокруг себя, но ходьба и управление
+		-- остаются обычными — можно бегать и крутиться одновременно.
+		spinConn = RunService.Heartbeat:Connect(function()
+			local character = player.Character
+			local hrp = character and character:FindFirstChild("HumanoidRootPart")
+			local humanoid = character and character:FindFirstChildOfClass("Humanoid")
+			if hrp and humanoid and humanoid.Health > 0 then
+				-- крутимся только вокруг вертикальной оси, без кувырков
+				hrp.AssemblyAngularVelocity = Vector3.new(0, SPIN_SPEED, 0)
+			end
+		end)
+	end
+	
+	local function apply()
+		TweenService:Create(button, INFO, { BackgroundColor3 = state and TRACK_ON or TRACK_OFF }):Play()
+		TweenService:Create(knob, INFO, { Position = state and ON_POS or OFF_POS, BackgroundColor3 = state and KNOB_ON or KNOB_OFF }):Play()
+	end
+	
+	button.Activated:Connect(function()
+		state = not state
+		apply()
+		if state then
+			startSpin()
+		else
+			stopSpin()
+		end
+		toast.show(state and "Spin Enabled" or "Spin Disabled")
+		print("[Switch] Spin toggled to", state)
+	end)
+	
+	-- После респавна эффект включается заново на новом персонаже
+	player.CharacterAdded:Connect(function()
+		task.wait(0.3)
+		if state then
+			startSpin()
+		end
+	end)
+end;
+task.spawn(C_26);
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.LowGravity.Switch.SwitchAnim
+local function C_2c()
+local script = G2L["2c"];
+	-- LEMONADE_UI_SCALE_CONVERTER (managed by Lemonade, do not edit or remove)
+	-- Pixel (Offset) values in Lemonade UIs are authored for a 1920x1080 screen.
+	-- This multiplies every pixel value under the ScreenGuis this script sees by
+	-- the fit of that reference inside the current viewport, so phones and
+	-- tablets show the desktop layout scaled down instead of desktop-sized pixels.
+	-- Scale fractions already follow the screen and stay as they are.
+	local lemonadeUiScale_REFERENCE = Vector2.new(1920, 1080)
+	local lemonadeUiScale_ATTRIBUTE_PREFIX = "LemonadeUiScale_"
+	-- Roblox sizes its own PlayerGui ScreenGuis (touch controls, prompts, chat,
+	-- freecam) for the device already.
+	local lemonadeUiScale_ROBLOX_SCREEN_GUIS = {
+		TouchGui = true,
+		ProximityPrompts = true,
+		Chat = true,
+		BubbleChat = true,
+		Freecam = true,
+	}
+	local lemonadeUiScale_PIXEL_PROPERTIES = {
+		GuiObject = { "Size", "Position" },
+		TextLabel = { "TextSize" },
+		TextButton = { "TextSize" },
+		TextBox = { "TextSize" },
+		ImageLabel = { "TileSize" },
+		ImageButton = { "TileSize" },
+		ScrollingFrame = { "CanvasSize", "ScrollBarThickness" },
+		UIStroke = { "Thickness" },
+		UICorner = { "CornerRadius" },
+		UIPadding = { "PaddingLeft", "PaddingRight", "PaddingTop", "PaddingBottom" },
+		UIListLayout = { "Padding" },
+		UIPageLayout = { "Padding" },
+		UITableLayout = { "Padding" },
+		UIGridLayout = { "CellSize", "CellPadding" },
+		UISizeConstraint = { "MinSize", "MaxSize" },
+		UITextSizeConstraint = { "MinTextSize", "MaxTextSize" },
+	}
+	
+	local function lemonadeUiScale_factor(viewport: Vector2): number
+		return math.min(viewport.X / lemonadeUiScale_REFERENCE.X, viewport.Y / lemonadeUiScale_REFERENCE.Y)
+	end
+	
+	local function lemonadeUiScale_scaleValue(value: any, factor: number): any
+		local kind = typeof(value)
+		if kind == "UDim" then
+			return UDim.new(value.Scale, math.round(value.Offset * factor))
+		end
+		if kind == "UDim2" then
+			return UDim2.new(
+				value.X.Scale,
+				math.round(value.X.Offset * factor),
+				value.Y.Scale,
+				math.round(value.Y.Offset * factor)
+			)
+		end
+		return value * factor
+	end
+	
+	-- The authored value is kept as an attribute so repeat passes, clones and
+	-- viewport changes always scale from it and never compound or drift.
+	local function lemonadeUiScale_apply(instance: Instance, factor: number)
+		local target = instance :: any
+		for className, properties in lemonadeUiScale_PIXEL_PROPERTIES do
+			if not instance:IsA(className) then
+				continue
+			end
+			for _, property in properties do
+				local attribute = lemonadeUiScale_ATTRIBUTE_PREFIX .. property
+				local authored = instance:GetAttribute(attribute)
+				if authored == nil then
+					authored = target[property]
+					if lemonadeUiScale_scaleValue(authored, 2) == authored then
+						continue
+					end
+					instance:SetAttribute(attribute, authored)
+				end
+				target[property] = lemonadeUiScale_scaleValue(authored, factor)
+			end
+		end
+	end
+	
+	local function lemonadeUiScale_hasOwnScale(screenGui: ScreenGui): boolean
+		for _, descendant in screenGui:GetDescendants() do
+			if descendant:IsA("UIScale") and not descendant.Parent:IsA("GuiButton") then
+				return true
+			end
+		end
+		return false
+	end
+	
+	local function lemonadeUiScale_shouldScale(screenGui: ScreenGui): boolean
+		return not lemonadeUiScale_ROBLOX_SCREEN_GUIS[screenGui.Name] and not lemonadeUiScale_hasOwnScale(screenGui)
+	end
+	
+	local function lemonadeUiScale_convert(screenGui: ScreenGui, factor: number)
+		-- A UIScale is the tree's own responsiveness; scaling pixels as well
+		-- would shrink it twice.
+		if not lemonadeUiScale_shouldScale(screenGui) then
+			return
+		end
+		for _, descendant in screenGui:GetDescendants() do
+			lemonadeUiScale_apply(descendant, factor)
+		end
+	end
+	
+	local lemonadeUiScale_RunService = game:GetService("RunService")
+	if lemonadeUiScale_RunService:IsRunning() and lemonadeUiScale_RunService:IsClient() then
+		local playerGui = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
+		local camera = workspace.CurrentCamera
+		local managed: { [ScreenGui]: boolean } = setmetatable({}, { __mode = "k" }) :: any
+		local function currentFactor(): number
+			return lemonadeUiScale_factor(camera.ViewportSize)
+		end
+		playerGui.ChildAdded:Connect(function(child)
+			if not child:IsA("ScreenGui") then
+				return
+			end
+			task.defer(function()
+				lemonadeUiScale_RunService.RenderStepped:Wait()
+				if not lemonadeUiScale_shouldScale(child) then
+					return
+				end
+				managed[child] = true
+				lemonadeUiScale_convert(child, currentFactor())
+				-- Deferred so properties the builder sets right after parenting are
+				-- read as authored.
+				child.DescendantAdded:Connect(function(descendant)
+					task.defer(function()
+						if descendant:IsDescendantOf(child) then
+							lemonadeUiScale_apply(descendant, currentFactor())
+						end
+					end)
+				end)
+			end)
+		end)
+		camera:GetPropertyChangedSignal("ViewportSize"):Connect(function()
+			local factor = currentFactor()
+			for screenGui in managed do
+				lemonadeUiScale_convert(screenGui, factor)
+			end
+		end)
+	end
+	-- END LEMONADE_UI_SCALE_CONVERTER
+	
+	local TweenService = game:GetService("TweenService")
+	local RunService = game:GetService("RunService")
+	local Players = game:GetService("Players")
+	
+	local button = script.Parent
+	local knob = button:WaitForChild("Knob")
+	
+	local TRACK_OFF = Color3.fromRGB(55, 12, 12)
+	local TRACK_ON = Color3.fromRGB(12, 55, 15)
+	local KNOB_OFF = Color3.fromRGB(215, 40, 40)
+	local KNOB_ON = Color3.fromRGB(55, 200, 45)
+	local OFF_POS = UDim2.new(0, 10, 0.5, 0)
+	local ON_POS = UDim2.new(0, 24, 0.5, 0)
+	local INFO = TweenInfo.new(0.18, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	local GRAVITY_FACTOR = 0.25 -- сколько гравитации остаётся (0.25 = лунная)
+	local JUMP_BOOST = 2 -- во сколько раз выше прыжки
+	
+	local player = Players.LocalPlayer
+	local toast = require(script:FindFirstAncestor("ModMenu"):WaitForChild("ToastManager"))
+	local state = false
+	local antiGrav = nil -- BodyForce, компенсирующий часть гравитации
+	local savedJumpPower = nil -- исходная сила прыжка
+	
+	local function stopLowGravity()
+		if antiGrav then
+			antiGrav:Destroy()
+			antiGrav = nil
+		end
+		local character = player.Character
+		local humanoid = character and character:FindFirstChildOfClass("Humanoid")
+		if humanoid and savedJumpPower then
+			humanoid.UseJumpPower = true
+			humanoid.JumpPower = savedJumpPower
+			savedJumpPower = nil
+		end
+	end
+	
+	local function startLowGravity()
+		stopLowGravity()
+		-- Лунная гравитация: BodyForce компенсирует часть веса персонажа,
+		-- поэтому падение медленное и парящее. Прыжки усилены.
+		local character = player.Character
+		local humanoid = character and character:FindFirstChildOfClass("Humanoid")
+		local hrp = character and character:FindFirstChild("HumanoidRootPart")
+		if humanoid and hrp then
+			-- усиливаем прыжок (запоминаем исходное значение)
+			if savedJumpPower == nil then
+				if humanoid.UseJumpPower then
+					savedJumpPower = humanoid.JumpPower
+				else
+					-- пересчёт из JumpHeight: power ≈ sqrt(2 * g * height)
+					savedJumpPower = math.sqrt(2 * workspace.Gravity * humanoid.JumpHeight)
+					humanoid.UseJumpPower = true
+				end
+			end
+			humanoid.JumpPower = savedJumpPower * JUMP_BOOST
+	
+			-- сила, компенсирующая часть гравитации (масса * g * доля)
+			antiGrav = Instance.new("BodyForce")
+			local countering = 1 - GRAVITY_FACTOR
+			antiGrav.Force = Vector3.new(0, hrp.AssemblyMass * workspace.Gravity * countering, 0)
+			antiGrav.Parent = hrp
+		end
+	end
+	
+	local function apply()
+		TweenService:Create(button, INFO, { BackgroundColor3 = state and TRACK_ON or TRACK_OFF }):Play()
+		TweenService:Create(knob, INFO, { Position = state and ON_POS or OFF_POS, BackgroundColor3 = state and KNOB_ON or KNOB_OFF }):Play()
+	end
+	
+	button.Activated:Connect(function()
+		state = not state
+		apply()
+		if state then
+			startLowGravity()
+		else
+			stopLowGravity()
+		end
+		toast.show(state and "Low Gravity Enabled" or "Low Gravity Disabled")
+		print("[Switch] LowGravity toggled to", state)
+	end)
+	
+	-- После респавна эффект включается заново на новом персонаже
+	player.CharacterAdded:Connect(function()
+		task.wait(0.3)
+		if state then
+			startLowGravity()
+		end
+	end)
+end;
+task.spawn(C_2c);
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.SnakeMode.Switch.SwitchAnim
+local function C_32()
+local script = G2L["32"];
+	-- LEMONADE_UI_SCALE_CONVERTER (managed by Lemonade, do not edit or remove)
+	-- Pixel (Offset) values in Lemonade UIs are authored for a 1920x1080 screen.
+	-- This multiplies every pixel value under the ScreenGuis this script sees by
+	-- the fit of that reference inside the current viewport, so phones and
+	-- tablets show the desktop layout scaled down instead of desktop-sized pixels.
+	-- Scale fractions already follow the screen and stay as they are.
+	local lemonadeUiScale_REFERENCE = Vector2.new(1920, 1080)
+	local lemonadeUiScale_ATTRIBUTE_PREFIX = "LemonadeUiScale_"
+	-- Roblox sizes its own PlayerGui ScreenGuis (touch controls, prompts, chat,
+	-- freecam) for the device already.
+	local lemonadeUiScale_ROBLOX_SCREEN_GUIS = {
+		TouchGui = true,
+		ProximityPrompts = true,
+		Chat = true,
+		BubbleChat = true,
+		Freecam = true,
+	}
+	local lemonadeUiScale_PIXEL_PROPERTIES = {
+		GuiObject = { "Size", "Position" },
+		TextLabel = { "TextSize" },
+		TextButton = { "TextSize" },
+		TextBox = { "TextSize" },
+		ImageLabel = { "TileSize" },
+		ImageButton = { "TileSize" },
+		ScrollingFrame = { "CanvasSize", "ScrollBarThickness" },
+		UIStroke = { "Thickness" },
+		UICorner = { "CornerRadius" },
+		UIPadding = { "PaddingLeft", "PaddingRight", "PaddingTop", "PaddingBottom" },
+		UIListLayout = { "Padding" },
+		UIPageLayout = { "Padding" },
+		UITableLayout = { "Padding" },
+		UIGridLayout = { "CellSize", "CellPadding" },
+		UISizeConstraint = { "MinSize", "MaxSize" },
+		UITextSizeConstraint = { "MinTextSize", "MaxTextSize" },
+	}
+	
+	local function lemonadeUiScale_factor(viewport: Vector2): number
+		return math.min(viewport.X / lemonadeUiScale_REFERENCE.X, viewport.Y / lemonadeUiScale_REFERENCE.Y)
+	end
+	
+	local function lemonadeUiScale_scaleValue(value: any, factor: number): any
+		local kind = typeof(value)
+		if kind == "UDim" then
+			return UDim.new(value.Scale, math.round(value.Offset * factor))
+		end
+		if kind == "UDim2" then
+			return UDim2.new(
+				value.X.Scale,
+				math.round(value.X.Offset * factor),
+				value.Y.Scale,
+				math.round(value.Y.Offset * factor)
+			)
+		end
+		return value * factor
+	end
+	
+	-- The authored value is kept as an attribute so repeat passes, clones and
+	-- viewport changes always scale from it and never compound or drift.
+	local function lemonadeUiScale_apply(instance: Instance, factor: number)
+		local target = instance :: any
+		for className, properties in lemonadeUiScale_PIXEL_PROPERTIES do
+			if not instance:IsA(className) then
+				continue
+			end
+			for _, property in properties do
+				local attribute = lemonadeUiScale_ATTRIBUTE_PREFIX .. property
+				local authored = instance:GetAttribute(attribute)
+				if authored == nil then
+					authored = target[property]
+					if lemonadeUiScale_scaleValue(authored, 2) == authored then
+						continue
+					end
+					instance:SetAttribute(attribute, authored)
+				end
+				target[property] = lemonadeUiScale_scaleValue(authored, factor)
+			end
+		end
+	end
+	
+	local function lemonadeUiScale_hasOwnScale(screenGui: ScreenGui): boolean
+		for _, descendant in screenGui:GetDescendants() do
+			if descendant:IsA("UIScale") and not descendant.Parent:IsA("GuiButton") then
+				return true
+			end
+		end
+		return false
+	end
+	
+	local function lemonadeUiScale_shouldScale(screenGui: ScreenGui): boolean
+		return not lemonadeUiScale_ROBLOX_SCREEN_GUIS[screenGui.Name] and not lemonadeUiScale_hasOwnScale(screenGui)
+	end
+	
+	local function lemonadeUiScale_convert(screenGui: ScreenGui, factor: number)
+		-- A UIScale is the tree's own responsiveness; scaling pixels as well
+		-- would shrink it twice.
+		if not lemonadeUiScale_shouldScale(screenGui) then
+			return
+		end
+		for _, descendant in screenGui:GetDescendants() do
+			lemonadeUiScale_apply(descendant, factor)
+		end
+	end
+	
+	local lemonadeUiScale_RunService = game:GetService("RunService")
+	if lemonadeUiScale_RunService:IsRunning() and lemonadeUiScale_RunService:IsClient() then
+		local playerGui = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
+		local camera = workspace.CurrentCamera
+		local managed: { [ScreenGui]: boolean } = setmetatable({}, { __mode = "k" }) :: any
+		local function currentFactor(): number
+			return lemonadeUiScale_factor(camera.ViewportSize)
+		end
+		playerGui.ChildAdded:Connect(function(child)
+			if not child:IsA("ScreenGui") then
+				return
+			end
+			task.defer(function()
+				lemonadeUiScale_RunService.RenderStepped:Wait()
+				if not lemonadeUiScale_shouldScale(child) then
+					return
+				end
+				managed[child] = true
+				lemonadeUiScale_convert(child, currentFactor())
+				-- Deferred so properties the builder sets right after parenting are
+				-- read as authored.
+				child.DescendantAdded:Connect(function(descendant)
+					task.defer(function()
+						if descendant:IsDescendantOf(child) then
+							lemonadeUiScale_apply(descendant, currentFactor())
+						end
+					end)
+				end)
+			end)
+		end)
+		camera:GetPropertyChangedSignal("ViewportSize"):Connect(function()
+			local factor = currentFactor()
+			for screenGui in managed do
+				lemonadeUiScale_convert(screenGui, factor)
+			end
+		end)
+	end
+	-- END LEMONADE_UI_SCALE_CONVERTER
+	
+	local TweenService = game:GetService("TweenService")
+	local RunService = game:GetService("RunService")
+	local Players = game:GetService("Players")
+	
+	local button = script.Parent
+	local knob = button:WaitForChild("Knob")
+	
+	local TRACK_OFF = Color3.fromRGB(55, 12, 12)
+	local TRACK_ON = Color3.fromRGB(12, 55, 15)
+	local KNOB_OFF = Color3.fromRGB(215, 40, 40)
+	local KNOB_ON = Color3.fromRGB(55, 200, 45)
+	local OFF_POS = UDim2.new(0, 10, 0.5, 0)
+	local ON_POS = UDim2.new(0, 24, 0.5, 0)
+	local INFO = TweenInfo.new(0.18, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	local CRAWL_SPEED = 12 -- скорость ползания по земле
+	
+	local player = Players.LocalPlayer
+	local toast = require(script:FindFirstAncestor("ModMenu"):WaitForChild("ToastManager"))
+	local state = false
+	local snakeConn = nil
+	local lastYaw = 0 -- последний угол направления движения
+	
+	local function stopSnake()
+		if snakeConn then
+			snakeConn:Disconnect()
+			snakeConn = nil
+		end
+		local character = player.Character
+		local hrp = character and character:FindFirstChild("HumanoidRootPart")
+		local humanoid = character and character:FindFirstChildOfClass("Humanoid")
+		if hrp then
+			hrp.AssemblyAngularVelocity = Vector3.zero
+		end
+		if humanoid then
+			humanoid.PlatformStand = false
+			humanoid:ChangeState(Enum.HumanoidStateType.GettingUp)
+		end
+	end
+	
+	local function startSnake()
+		stopSnake()
+		-- Змеиный режим: персонаж ложится на землю и ползёт.
+		-- Управление берём из Humanoid.MoveDirection — работает и с WASD,
+		-- и с мобильным джойстиком.
+		local character = player.Character
+		local humanoid = character and character:FindFirstChildOfClass("Humanoid")
+		if humanoid then
+			humanoid.PlatformStand = true
+		end
+	
+		snakeConn = RunService.Heartbeat:Connect(function()
+			local character = player.Character
+			local hrp = character and character:FindFirstChild("HumanoidRootPart")
+			local humanoid = character and character:FindFirstChildOfClass("Humanoid")
+			if hrp and humanoid and humanoid.Health > 0 then
+				local move = humanoid.MoveDirection
+				if move.Magnitude > 0.01 then
+					-- поворачиваемся в сторону движения и ползём
+					lastYaw = math.atan2(-move.X, -move.Z)
+					hrp.AssemblyLinearVelocity = Vector3.new(
+						move.X * CRAWL_SPEED,
+						hrp.AssemblyLinearVelocity.Y,
+						move.Z * CRAWL_SPEED
+					)
+				else
+					-- стоим на месте, но продолжаем лежать
+					hrp.AssemblyLinearVelocity = Vector3.new(0, hrp.AssemblyLinearVelocity.Y, 0)
+				end
+				-- поза лёжа: лежим на груди, лицом в сторону движения
+				hrp.CFrame = CFrame.new(hrp.Position)
+					* CFrame.Angles(0, lastYaw, 0)
+					* CFrame.Angles(math.rad(90), 0, 0)
+			end
+		end)
+	end
+	
+	local function apply()
+		TweenService:Create(button, INFO, { BackgroundColor3 = state and TRACK_ON or TRACK_OFF }):Play()
+		TweenService:Create(knob, INFO, { Position = state and ON_POS or OFF_POS, BackgroundColor3 = state and KNOB_ON or KNOB_OFF }):Play()
+	end
+	
+	button.Activated:Connect(function()
+		state = not state
+		apply()
+		if state then
+			startSnake()
+		else
+			stopSnake()
+		end
+		toast.show(state and "Snake Mode Enabled" or "Snake Mode Disabled")
+		print("[Switch] SnakeMode toggled to", state)
+	end)
+	
+	-- После респавна эффект включается заново на новом персонаже
+	player.CharacterAdded:Connect(function()
+		task.wait(0.3)
+		if state then
+			startSnake()
+		end
+	end)
+end;
+task.spawn(C_32);
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.ThirdPersonView.Switch.SwitchAnim
+local function C_38()
+local script = G2L["38"];
+	-- LEMONADE_UI_SCALE_CONVERTER (managed by Lemonade, do not edit or remove)
+	-- Pixel (Offset) values in Lemonade UIs are authored for a 1920x1080 screen.
+	-- This multiplies every pixel value under the ScreenGuis this script sees by
+	-- the fit of that reference inside the current viewport, so phones and
+	-- tablets show the desktop layout scaled down instead of desktop-sized pixels.
+	-- Scale fractions already follow the screen and stay as they are.
+	local lemonadeUiScale_REFERENCE = Vector2.new(1920, 1080)
+	local lemonadeUiScale_ATTRIBUTE_PREFIX = "LemonadeUiScale_"
+	-- Roblox sizes its own PlayerGui ScreenGuis (touch controls, prompts, chat,
+	-- freecam) for the device already.
+	local lemonadeUiScale_ROBLOX_SCREEN_GUIS = {
+		TouchGui = true,
+		ProximityPrompts = true,
+		Chat = true,
+		BubbleChat = true,
+		Freecam = true,
+	}
+	local lemonadeUiScale_PIXEL_PROPERTIES = {
+		GuiObject = { "Size", "Position" },
+		TextLabel = { "TextSize" },
+		TextButton = { "TextSize" },
+		TextBox = { "TextSize" },
+		ImageLabel = { "TileSize" },
+		ImageButton = { "TileSize" },
+		ScrollingFrame = { "CanvasSize", "ScrollBarThickness" },
+		UIStroke = { "Thickness" },
+		UICorner = { "CornerRadius" },
+		UIPadding = { "PaddingLeft", "PaddingRight", "PaddingTop", "PaddingBottom" },
+		UIListLayout = { "Padding" },
+		UIPageLayout = { "Padding" },
+		UITableLayout = { "Padding" },
+		UIGridLayout = { "CellSize", "CellPadding" },
+		UISizeConstraint = { "MinSize", "MaxSize" },
+		UITextSizeConstraint = { "MinTextSize", "MaxTextSize" },
+	}
+	
+	local function lemonadeUiScale_factor(viewport: Vector2): number
+		return math.min(viewport.X / lemonadeUiScale_REFERENCE.X, viewport.Y / lemonadeUiScale_REFERENCE.Y)
+	end
+	
+	local function lemonadeUiScale_scaleValue(value: any, factor: number): any
+		local kind = typeof(value)
+		if kind == "UDim" then
+			return UDim.new(value.Scale, math.round(value.Offset * factor))
+		end
+		if kind == "UDim2" then
+			return UDim2.new(
+				value.X.Scale,
+				math.round(value.X.Offset * factor),
+				value.Y.Scale,
+				math.round(value.Y.Offset * factor)
+			)
+		end
+		return value * factor
+	end
+	
+	-- The authored value is kept as an attribute so repeat passes, clones and
+	-- viewport changes always scale from it and never compound or drift.
+	local function lemonadeUiScale_apply(instance: Instance, factor: number)
+		local target = instance :: any
+		for className, properties in lemonadeUiScale_PIXEL_PROPERTIES do
+			if not instance:IsA(className) then
+				continue
+			end
+			for _, property in properties do
+				local attribute = lemonadeUiScale_ATTRIBUTE_PREFIX .. property
+				local authored = instance:GetAttribute(attribute)
+				if authored == nil then
+					authored = target[property]
+					if lemonadeUiScale_scaleValue(authored, 2) == authored then
+						continue
+					end
+					instance:SetAttribute(attribute, authored)
+				end
+				target[property] = lemonadeUiScale_scaleValue(authored, factor)
+			end
+		end
+	end
+	
+	local function lemonadeUiScale_hasOwnScale(screenGui: ScreenGui): boolean
+		for _, descendant in screenGui:GetDescendants() do
+			if descendant:IsA("UIScale") and not descendant.Parent:IsA("GuiButton") then
+				return true
+			end
+		end
+		return false
+	end
+	
+	local function lemonadeUiScale_shouldScale(screenGui: ScreenGui): boolean
+		return not lemonadeUiScale_ROBLOX_SCREEN_GUIS[screenGui.Name] and not lemonadeUiScale_hasOwnScale(screenGui)
+	end
+	
+	local function lemonadeUiScale_convert(screenGui: ScreenGui, factor: number)
+		-- A UIScale is the tree's own responsiveness; scaling pixels as well
+		-- would shrink it twice.
+		if not lemonadeUiScale_shouldScale(screenGui) then
+			return
+		end
+		for _, descendant in screenGui:GetDescendants() do
+			lemonadeUiScale_apply(descendant, factor)
+		end
+	end
+	
+	local lemonadeUiScale_RunService = game:GetService("RunService")
+	if lemonadeUiScale_RunService:IsRunning() and lemonadeUiScale_RunService:IsClient() then
+		local playerGui = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
+		local camera = workspace.CurrentCamera
+		local managed: { [ScreenGui]: boolean } = setmetatable({}, { __mode = "k" }) :: any
+		local function currentFactor(): number
+			return lemonadeUiScale_factor(camera.ViewportSize)
+		end
+		playerGui.ChildAdded:Connect(function(child)
+			if not child:IsA("ScreenGui") then
+				return
+			end
+			task.defer(function()
+				lemonadeUiScale_RunService.RenderStepped:Wait()
+				if not lemonadeUiScale_shouldScale(child) then
+					return
+				end
+				managed[child] = true
+				lemonadeUiScale_convert(child, currentFactor())
+				-- Deferred so properties the builder sets right after parenting are
+				-- read as authored.
+				child.DescendantAdded:Connect(function(descendant)
+					task.defer(function()
+						if descendant:IsDescendantOf(child) then
+							lemonadeUiScale_apply(descendant, currentFactor())
+						end
+					end)
+				end)
+			end)
+		end)
+		camera:GetPropertyChangedSignal("ViewportSize"):Connect(function()
+			local factor = currentFactor()
+			for screenGui in managed do
+				lemonadeUiScale_convert(screenGui, factor)
+			end
+		end)
+	end
+	-- END LEMONADE_UI_SCALE_CONVERTER
+	
+	local TweenService = game:GetService("TweenService")
+	local RunService = game:GetService("RunService")
+	local Players = game:GetService("Players")
+	
+	local button = script.Parent
+	local knob = button:WaitForChild("Knob")
+	
+	local TRACK_OFF = Color3.fromRGB(55, 12, 12)
+	local TRACK_ON = Color3.fromRGB(12, 55, 15)
+	local KNOB_OFF = Color3.fromRGB(215, 40, 40)
+	local KNOB_ON = Color3.fromRGB(55, 200, 45)
+	local OFF_POS = UDim2.new(0, 10, 0.5, 0)
+	local ON_POS = UDim2.new(0, 24, 0.5, 0)
+	local INFO = TweenInfo.new(0.18, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	local ZOOM_DISTANCE = 12 -- дистанция камеры в третьем лице
+	
+	local player = Players.LocalPlayer
+	local toast = require(script:FindFirstAncestor("ModMenu"):WaitForChild("ToastManager"))
+	local state = false
+	-- Запоминаем исходные настройки камеры игры, чтобы вернуть их при выключении
+	local savedMode = nil
+	local savedMin = nil
+	local savedMax = nil
+	
+	-- Разблокировка вида от третьего лица, даже если игра зафиксировала
+	-- камеру в первом лице (CameraMode.LockFirstPerson / MinZoom = 0).
+	local function stopThirdPerson()
+		if savedMode then player.CameraMode = savedMode end
+		if savedMin then player.CameraMinZoomDistance = savedMin end
+		if savedMax then player.CameraMaxZoomDistance = savedMax end
+	end
+	
+	local function startThirdPerson()
+		-- сохраняем настройки один раз, до их изменения
+		if savedMode == nil then
+			savedMode = player.CameraMode
+			savedMin = player.CameraMinZoomDistance
+			savedMax = player.CameraMaxZoomDistance
+		end
+		player.CameraMode = Enum.CameraMode.Classic
+		player.CameraMinZoomDistance = ZOOM_DISTANCE
+		player.CameraMaxZoomDistance = ZOOM_DISTANCE
+	end
+	
+	local function apply()
+		TweenService:Create(button, INFO, { BackgroundColor3 = state and TRACK_ON or TRACK_OFF }):Play()
+		TweenService:Create(knob, INFO, { Position = state and ON_POS or OFF_POS, BackgroundColor3 = state and KNOB_ON or KNOB_OFF }):Play()
+	end
+	
+	button.Activated:Connect(function()
+		state = not state
+		apply()
+		if state then
+			startThirdPerson()
+		else
+			stopThirdPerson()
+		end
+		toast.show(state and "Third Person Enabled" or "Third Person Disabled")
+		print("[Switch] ThirdPersonView toggled to", state)
+	end)
+	
+	-- После респавна эффект включается заново на новом персонаже
+	player.CharacterAdded:Connect(function()
+		task.wait(0.3)
+		if state then
+			startThirdPerson()
+		end
+	end)
+end;
+task.spawn(C_38);
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.Jump.SpeedSlider
+local function C_3d()
+local script = G2L["3d"];
+	local Players = game:GetService("Players")
+	local UserInputService = game:GetService("UserInputService")
+	
+	local row = script.Parent
+	local track = row:WaitForChild("Track")
+	local knob = track:WaitForChild("Knob")
+	
+	-- Пока тянешь ползунок — шарик плавно увеличивается.
+	local knobScale = Instance.new("UIScale")
+	knobScale.Scale = 1
+	knobScale.Parent = knob
+	
+	local GROW_SCALE = 1.15
+	local function growTo(target)
+		knobScale.Scale = target
+	end
+	
+	local MIN_SPEED = 0
+	local MAX_SPEED = 200
+	local value = 50
+	
+	local GREEN = "#4CD04B"
+	
+	local player = Players.LocalPlayer
+	local dragging = false
+	local baseKnobSize = 14 -- размер шарика без увеличения (UIScale меняет AbsoluteSize)
+	
+	local function applySpeed()
+		local character = player.Character
+		local humanoid = character and character:FindFirstChildOfClass("Humanoid")
+		if humanoid then
+			humanoid.UseJumpPower = true
+			humanoid.JumpPower = value
+		end
+	end
+	
+	local function updateLabel()
+		row.Text = (" JUMP POWER: <font color='%s'>%d</font>"):format(GREEN, value)
+	end
+	
+	local function setKnobFraction(fraction)
+		local half = baseKnobSize / 2
+		local span = track.AbsoluteSize.X - baseKnobSize
+		knob.Position = UDim2.new(0, half + fraction * span, 0.5, 0)
+	end
+	
+	local function setFromMouseX(mouseX)
+		local half = baseKnobSize / 2
+		local span = track.AbsoluteSize.X - baseKnobSize
+		if span <= 0 then
+			return
+		end
+		local fraction = math.clamp((mouseX - track.AbsolutePosition.X - half) / span, 0, 1)
+		value = math.floor(MIN_SPEED + fraction * (MAX_SPEED - MIN_SPEED) + 0.5)
+		setKnobFraction(fraction)
+		updateLabel()
+		applySpeed()
+	end
+	
+	local function onInputBegan(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			growTo(GROW_SCALE)
+			setFromMouseX(input.Position.X)
+		end
+	end
+	
+	track.InputBegan:Connect(onInputBegan)
+	knob.InputBegan:Connect(onInputBegan)
+	
+	UserInputService.InputChanged:Connect(function(input)
+		if not dragging then
+			return
+		end
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			setFromMouseX(input.Position.X)
+		end
+	end)
+	
+	UserInputService.InputEnded:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = false
+			growTo(1)
+		end
+	end)
+	
+	-- Ползунок стартует на значении 50 (стандартный JumpPower).
+	-- Ждём, пока GUI посчитает размеры, иначе AbsoluteSize == 0.
+	task.spawn(function()
+		while track.AbsoluteSize.X <= 0 do
+			task.wait()
+		end
+		baseKnobSize = knob.AbsoluteSize.X
+		setKnobFraction((value - MIN_SPEED) / (MAX_SPEED - MIN_SPEED))
+		updateLabel()
+		print("[SpeedSlider] init, speed =", value)
+	end)
+	
+	-- После респавна сила прыжка применяется заново.
+	player.CharacterAdded:Connect(function(character)
+		local humanoid = character:WaitForChild("Humanoid", 5)
+		if humanoid then
+			task.wait(0.2)
+			humanoid.UseJumpPower = true
+			humanoid.JumpPower = value
+		end
+	end)
+end;
+task.spawn(C_3d);
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.PlayerEsp.Switch.SwitchAnim
+local function C_43()
+local script = G2L["43"];
+	-- LEMONADE_UI_SCALE_CONVERTER (managed by Lemonade, do not edit or remove)
+	-- Pixel (Offset) values in Lemonade UIs are authored for a 1920x1080 screen.
+	-- This multiplies every pixel value under the ScreenGuis this script sees by
+	-- the fit of that reference inside the current viewport, so phones and
+	-- tablets show the desktop layout scaled down instead of desktop-sized pixels.
+	-- Scale fractions already follow the screen and stay as they are.
+	local lemonadeUiScale_REFERENCE = Vector2.new(1920, 1080)
+	local lemonadeUiScale_ATTRIBUTE_PREFIX = "LemonadeUiScale_"
+	-- Roblox sizes its own PlayerGui ScreenGuis (touch controls, prompts, chat,
+	-- freecam) for the device already.
+	local lemonadeUiScale_ROBLOX_SCREEN_GUIS = {
+		TouchGui = true,
+		ProximityPrompts = true,
+		Chat = true,
+		BubbleChat = true,
+		Freecam = true,
+	}
+	local lemonadeUiScale_PIXEL_PROPERTIES = {
+		GuiObject = { "Size", "Position" },
+		TextLabel = { "TextSize" },
+		TextButton = { "TextSize" },
+		TextBox = { "TextSize" },
+		ImageLabel = { "TileSize" },
+		ImageButton = { "TileSize" },
+		ScrollingFrame = { "CanvasSize", "ScrollBarThickness" },
+		UIStroke = { "Thickness" },
+		UICorner = { "CornerRadius" },
+		UIPadding = { "PaddingLeft", "PaddingRight", "PaddingTop", "PaddingBottom" },
+		UIListLayout = { "Padding" },
+		UIPageLayout = { "Padding" },
+		UITableLayout = { "Padding" },
+		UIGridLayout = { "CellSize", "CellPadding" },
+		UISizeConstraint = { "MinSize", "MaxSize" },
+		UITextSizeConstraint = { "MinTextSize", "MaxTextSize" },
+	}
+	
+	local function lemonadeUiScale_factor(viewport: Vector2): number
+		return math.min(viewport.X / lemonadeUiScale_REFERENCE.X, viewport.Y / lemonadeUiScale_REFERENCE.Y)
+	end
+	
+	local function lemonadeUiScale_scaleValue(value: any, factor: number): any
+		local kind = typeof(value)
+		if kind == "UDim" then
+			return UDim.new(value.Scale, math.round(value.Offset * factor))
+		end
+		if kind == "UDim2" then
+			return UDim2.new(
+				value.X.Scale,
+				math.round(value.X.Offset * factor),
+				value.Y.Scale,
+				math.round(value.Y.Offset * factor)
+			)
+		end
+		return value * factor
+	end
+	
+	-- The authored value is kept as an attribute so repeat passes, clones and
+	-- viewport changes always scale from it and never compound or drift.
+	local function lemonadeUiScale_apply(instance: Instance, factor: number)
+		local target = instance :: any
+		for className, properties in lemonadeUiScale_PIXEL_PROPERTIES do
+			if not instance:IsA(className) then
+				continue
+			end
+			for _, property in properties do
+				local attribute = lemonadeUiScale_ATTRIBUTE_PREFIX .. property
+				local authored = instance:GetAttribute(attribute)
+				if authored == nil then
+					authored = target[property]
+					if lemonadeUiScale_scaleValue(authored, 2) == authored then
+						continue
+					end
+					instance:SetAttribute(attribute, authored)
+				end
+				target[property] = lemonadeUiScale_scaleValue(authored, factor)
+			end
+		end
+	end
+	
+	local function lemonadeUiScale_hasOwnScale(screenGui: ScreenGui): boolean
+		for _, descendant in screenGui:GetDescendants() do
+			if descendant:IsA("UIScale") and not descendant.Parent:IsA("GuiButton") then
+				return true
+			end
+		end
+		return false
+	end
+	
+	local function lemonadeUiScale_shouldScale(screenGui: ScreenGui): boolean
+		return not lemonadeUiScale_ROBLOX_SCREEN_GUIS[screenGui.Name] and not lemonadeUiScale_hasOwnScale(screenGui)
+	end
+	
+	local function lemonadeUiScale_convert(screenGui: ScreenGui, factor: number)
+		-- A UIScale is the tree's own responsiveness; scaling pixels as well
+		-- would shrink it twice.
+		if not lemonadeUiScale_shouldScale(screenGui) then
+			return
+		end
+		for _, descendant in screenGui:GetDescendants() do
+			lemonadeUiScale_apply(descendant, factor)
+		end
+	end
+	
+	local lemonadeUiScale_RunService = game:GetService("RunService")
+	if lemonadeUiScale_RunService:IsRunning() and lemonadeUiScale_RunService:IsClient() then
+		local playerGui = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
+		local camera = workspace.CurrentCamera
+		local managed: { [ScreenGui]: boolean } = setmetatable({}, { __mode = "k" }) :: any
+		local function currentFactor(): number
+			return lemonadeUiScale_factor(camera.ViewportSize)
+		end
+		playerGui.ChildAdded:Connect(function(child)
+			if not child:IsA("ScreenGui") then
+				return
+			end
+			task.defer(function()
+				lemonadeUiScale_RunService.RenderStepped:Wait()
+				if not lemonadeUiScale_shouldScale(child) then
+					return
+				end
+				managed[child] = true
+				lemonadeUiScale_convert(child, currentFactor())
+				-- Deferred so properties the builder sets right after parenting are
+				-- read as authored.
+				child.DescendantAdded:Connect(function(descendant)
+					task.defer(function()
+						if descendant:IsDescendantOf(child) then
+							lemonadeUiScale_apply(descendant, currentFactor())
+						end
+					end)
+				end)
+			end)
+		end)
+		camera:GetPropertyChangedSignal("ViewportSize"):Connect(function()
+			local factor = currentFactor()
+			for screenGui in managed do
+				lemonadeUiScale_convert(screenGui, factor)
+			end
+		end)
+	end
+	-- END LEMONADE_UI_SCALE_CONVERTER
+	
+	local TweenService = game:GetService("TweenService")
+	local RunService = game:GetService("RunService")
+	local Players = game:GetService("Players")
+	
+	local button = script.Parent
+	local knob = button:WaitForChild("Knob")
+	
+	local TRACK_OFF = Color3.fromRGB(55, 12, 12)
+	local TRACK_ON = Color3.fromRGB(12, 55, 15)
+	local KNOB_OFF = Color3.fromRGB(215, 40, 40)
+	local KNOB_ON = Color3.fromRGB(55, 200, 45)
+	local OFF_POS = UDim2.new(0, 10, 0.5, 0)
+	local ON_POS = UDim2.new(0, 24, 0.5, 0)
+	local INFO = TweenInfo.new(0.18, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	local player = Players.LocalPlayer
+	local toast = require(script:FindFirstAncestor("ModMenu"):WaitForChild("ToastManager"))
+	local state = false
+	
+	-- PLAYER ESP: подсветка всех игроков через Highlight (из референса T1Hub)
+	local ESP_FILL_TRANSPARENCY = 0.68
+	local espFolder = workspace:FindFirstChild("ModMenuESPHighlights")
+	if not espFolder then
+		espFolder = Instance.new("Folder")
+		espFolder.Name = "ModMenuESPHighlights"
+		espFolder.Parent = workspace
+	end
+	for _, child in ipairs(espFolder:GetChildren()) do
+		if child:IsA("Highlight") then
+			child:Destroy()
+		end
+	end
+	
+	local highlights = {}
+	local playerConnections = {}
+	local characterVersions = {}
+	local reconcileConnection
+	local reconcileAccumulator = 0
+	
+	local function getHighlightColor(targetPlayer)
+		if targetPlayer.Team then
+			return targetPlayer.Team.TeamColor.Color
+		end
+		return Color3.fromRGB(255, 255, 255)
+	end
+	
+	local function destroyHighlight(targetPlayer)
+		local highlight = highlights[targetPlayer]
+		highlights[targetPlayer] = nil
+		if highlight then
+			highlight:Destroy()
+		end
+	end
+	
+	local function destroyAllHighlights()
+		for targetPlayer in pairs(highlights) do
+			destroyHighlight(targetPlayer)
+		end
+		for _, child in ipairs(espFolder:GetChildren()) do
+			if child:IsA("Highlight") then
+				child:Destroy()
+			end
+		end
+	end
+	
+	local function isCurrentCharacter(targetPlayer, character)
+		return targetPlayer.Character == character and character.Parent ~= nil and character:IsDescendantOf(workspace)
+	end
+	
+	local function syncPlayer(targetPlayer)
+		if not state or targetPlayer == player then
+			if targetPlayer ~= player then
+				destroyHighlight(targetPlayer)
+			end
+			return
+		end
+	
+		local character = targetPlayer.Character
+		if not isCurrentCharacter(targetPlayer, character) then
+			destroyHighlight(targetPlayer)
+			return
+		end
+	
+		local color = getHighlightColor(targetPlayer)
+		local highlight = highlights[targetPlayer]
+		if not highlight or not highlight.Parent or highlight.Adornee ~= character then
+			destroyHighlight(targetPlayer)
+			highlight = Instance.new("Highlight")
+			highlight.Name = "ESP_" .. targetPlayer.UserId
+			highlight.Adornee = character
+			highlight.FillTransparency = ESP_FILL_TRANSPARENCY
+			highlight.OutlineTransparency = 0
+			highlight.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+			highlight.Parent = espFolder
+			highlights[targetPlayer] = highlight
+		end
+	
+		highlight.Enabled = true
+		highlight.FillColor = color
+		highlight.OutlineColor = color
+	end
+	
+	local function syncAllPlayers()
+		for _, targetPlayer in ipairs(Players:GetPlayers()) do
+			if targetPlayer ~= player then
+				syncPlayer(targetPlayer)
+			end
+		end
+	end
+	
+	local function watchCharacter(targetPlayer, character)
+		characterVersions[targetPlayer] = (characterVersions[targetPlayer] or 0) + 1
+		local version = characterVersions[targetPlayer]
+	
+		task.spawn(function()
+			local deadline = os.clock() + 10
+			while state and characterVersions[targetPlayer] == version and targetPlayer.Character == character and character.Parent == nil and os.clock() < deadline do
+				task.wait()
+			end
+			if state and characterVersions[targetPlayer] == version and targetPlayer.Character == character then
+				syncPlayer(targetPlayer)
+			end
+		end)
+	
+		syncPlayer(targetPlayer)
+	end
+	
+	local function disconnectPlayer(targetPlayer)
+		local connections = playerConnections[targetPlayer]
+		if connections then
+			for _, connection in ipairs(connections) do
+				connection:Disconnect()
+			end
+			playerConnections[targetPlayer] = nil
+		end
+		characterVersions[targetPlayer] = nil
+		destroyHighlight(targetPlayer)
+	end
+	
+	local function connectPlayer(targetPlayer)
+		if targetPlayer == player then
+			return
+		end
+	
+		disconnectPlayer(targetPlayer)
+		local connections = {}
+		playerConnections[targetPlayer] = connections
+	
+		connections[#connections + 1] = targetPlayer.CharacterAdded:Connect(function(character)
+			watchCharacter(targetPlayer, character)
+		end)
+	
+		connections[#connections + 1] = targetPlayer.CharacterRemoving:Connect(function(character)
+			if targetPlayer.Character ~= character then
+				return
+			end
+			characterVersions[targetPlayer] = (characterVersions[targetPlayer] or 0) + 1
+			destroyHighlight(targetPlayer)
+		end)
+	
+		connections[#connections + 1] = targetPlayer:GetPropertyChangedSignal("Team"):Connect(function()
+			syncPlayer(targetPlayer)
+		end)
+	
+		if targetPlayer.Character then
+			watchCharacter(targetPlayer, targetPlayer.Character)
+		end
+	end
+	
+	local function startReconciliation()
+		if reconcileConnection then
+			return
+		end
+	
+		reconcileAccumulator = 0
+		reconcileConnection = RunService.Heartbeat:Connect(function(deltaTime)
+			reconcileAccumulator += deltaTime
+			if reconcileAccumulator < 0.5 then
+				return
+			end
+			reconcileAccumulator = 0
+			if state then
+				syncAllPlayers()
+			end
+		end)
+	end
+	
+	local function stopReconciliation()
+		if reconcileConnection then
+			reconcileConnection:Disconnect()
+			reconcileConnection = nil
+		end
+	end
+	
+	for _, targetPlayer in ipairs(Players:GetPlayers()) do
+		connectPlayer(targetPlayer)
+	end
+	
+	Players.PlayerAdded:Connect(connectPlayer)
+	Players.PlayerRemoving:Connect(disconnectPlayer)
+	
+	local function apply()
+		TweenService:Create(button, INFO, { BackgroundColor3 = state and TRACK_ON or TRACK_OFF }):Play()
+		TweenService:Create(knob, INFO, { Position = state and ON_POS or OFF_POS, BackgroundColor3 = state and KNOB_ON or KNOB_OFF }):Play()
+	end
+	
+	button.Activated:Connect(function()
+		state = not state
+		apply()
+		if state then
+			startReconciliation()
+			syncAllPlayers()
+		else
+			stopReconciliation()
+			destroyAllHighlights()
+		end
+		toast.show(state and "Player ESP Enabled" or "Player ESP Disabled")
+		print("[Switch] PlayerEsp toggled to", state)
+	end)
+end;
+task.spawn(C_43);
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.Xray.Switch.SwitchAnim
+local function C_49()
+local script = G2L["49"];
+	-- LEMONADE_UI_SCALE_CONVERTER (managed by Lemonade, do not edit or remove)
+	-- Pixel (Offset) values in Lemonade UIs are authored for a 1920x1080 screen.
+	-- This multiplies every pixel value under the ScreenGuis this script sees by
+	-- the fit of that reference inside the current viewport, so phones and
+	-- tablets show the desktop layout scaled down instead of desktop-sized pixels.
+	-- Scale fractions already follow the screen and stay as they are.
+	local lemonadeUiScale_REFERENCE = Vector2.new(1920, 1080)
+	local lemonadeUiScale_ATTRIBUTE_PREFIX = "LemonadeUiScale_"
+	-- Roblox sizes its own PlayerGui ScreenGuis (touch controls, prompts, chat,
+	-- freecam) for the device already.
+	local lemonadeUiScale_ROBLOX_SCREEN_GUIS = {
+		TouchGui = true,
+		ProximityPrompts = true,
+		Chat = true,
+		BubbleChat = true,
+		Freecam = true,
+	}
+	local lemonadeUiScale_PIXEL_PROPERTIES = {
+		GuiObject = { "Size", "Position" },
+		TextLabel = { "TextSize" },
+		TextButton = { "TextSize" },
+		TextBox = { "TextSize" },
+		ImageLabel = { "TileSize" },
+		ImageButton = { "TileSize" },
+		ScrollingFrame = { "CanvasSize", "ScrollBarThickness" },
+		UIStroke = { "Thickness" },
+		UICorner = { "CornerRadius" },
+		UIPadding = { "PaddingLeft", "PaddingRight", "PaddingTop", "PaddingBottom" },
+		UIListLayout = { "Padding" },
+		UIPageLayout = { "Padding" },
+		UITableLayout = { "Padding" },
+		UIGridLayout = { "CellSize", "CellPadding" },
+		UISizeConstraint = { "MinSize", "MaxSize" },
+		UITextSizeConstraint = { "MinTextSize", "MaxTextSize" },
+	}
+	
+	local function lemonadeUiScale_factor(viewport: Vector2): number
+		return math.min(viewport.X / lemonadeUiScale_REFERENCE.X, viewport.Y / lemonadeUiScale_REFERENCE.Y)
+	end
+	
+	local function lemonadeUiScale_scaleValue(value: any, factor: number): any
+		local kind = typeof(value)
+		if kind == "UDim" then
+			return UDim.new(value.Scale, math.round(value.Offset * factor))
+		end
+		if kind == "UDim2" then
+			return UDim2.new(
+				value.X.Scale,
+				math.round(value.X.Offset * factor),
+				value.Y.Scale,
+				math.round(value.Y.Offset * factor)
+			)
+		end
+		return value * factor
+	end
+	
+	-- The authored value is kept as an attribute so repeat passes, clones and
+	-- viewport changes always scale from it and never compound or drift.
+	local function lemonadeUiScale_apply(instance: Instance, factor: number)
+		local target = instance :: any
+		for className, properties in lemonadeUiScale_PIXEL_PROPERTIES do
+			if not instance:IsA(className) then
+				continue
+			end
+			for _, property in properties do
+				local attribute = lemonadeUiScale_ATTRIBUTE_PREFIX .. property
+				local authored = instance:GetAttribute(attribute)
+				if authored == nil then
+					authored = target[property]
+					if lemonadeUiScale_scaleValue(authored, 2) == authored then
+						continue
+					end
+					instance:SetAttribute(attribute, authored)
+				end
+				target[property] = lemonadeUiScale_scaleValue(authored, factor)
+			end
+		end
+	end
+	
+	local function lemonadeUiScale_hasOwnScale(screenGui: ScreenGui): boolean
+		for _, descendant in screenGui:GetDescendants() do
+			if descendant:IsA("UIScale") and not descendant.Parent:IsA("GuiButton") then
+				return true
+			end
+		end
+		return false
+	end
+	
+	local function lemonadeUiScale_shouldScale(screenGui: ScreenGui): boolean
+		return not lemonadeUiScale_ROBLOX_SCREEN_GUIS[screenGui.Name] and not lemonadeUiScale_hasOwnScale(screenGui)
+	end
+	
+	local function lemonadeUiScale_convert(screenGui: ScreenGui, factor: number)
+		-- A UIScale is the tree's own responsiveness; scaling pixels as well
+		-- would shrink it twice.
+		if not lemonadeUiScale_shouldScale(screenGui) then
+			return
+		end
+		for _, descendant in screenGui:GetDescendants() do
+			lemonadeUiScale_apply(descendant, factor)
+		end
+	end
+	
+	local lemonadeUiScale_RunService = game:GetService("RunService")
+	if lemonadeUiScale_RunService:IsRunning() and lemonadeUiScale_RunService:IsClient() then
+		local playerGui = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
+		local camera = workspace.CurrentCamera
+		local managed: { [ScreenGui]: boolean } = setmetatable({}, { __mode = "k" }) :: any
+		local function currentFactor(): number
+			return lemonadeUiScale_factor(camera.ViewportSize)
+		end
+		playerGui.ChildAdded:Connect(function(child)
+			if not child:IsA("ScreenGui") then
+				return
+			end
+			task.defer(function()
+				lemonadeUiScale_RunService.RenderStepped:Wait()
+				if not lemonadeUiScale_shouldScale(child) then
+					return
+				end
+				managed[child] = true
+				lemonadeUiScale_convert(child, currentFactor())
+				-- Deferred so properties the builder sets right after parenting are
+				-- read as authored.
+				child.DescendantAdded:Connect(function(descendant)
+					task.defer(function()
+						if descendant:IsDescendantOf(child) then
+							lemonadeUiScale_apply(descendant, currentFactor())
+						end
+					end)
+				end)
+			end)
+		end)
+		camera:GetPropertyChangedSignal("ViewportSize"):Connect(function()
+			local factor = currentFactor()
+			for screenGui in managed do
+				lemonadeUiScale_convert(screenGui, factor)
+			end
+		end)
+	end
+	-- END LEMONADE_UI_SCALE_CONVERTER
+	
+	local TweenService = game:GetService("TweenService")
+	local RunService = game:GetService("RunService")
+	local Players = game:GetService("Players")
+	
+	local button = script.Parent
+	local knob = button:WaitForChild("Knob")
+	
+	local TRACK_OFF = Color3.fromRGB(55, 12, 12)
+	local TRACK_ON = Color3.fromRGB(12, 55, 15)
+	local KNOB_OFF = Color3.fromRGB(215, 40, 40)
+	local KNOB_ON = Color3.fromRGB(55, 200, 45)
+	local OFF_POS = UDim2.new(0, 10, 0.5, 0)
+	local ON_POS = UDim2.new(0, 24, 0.5, 0)
+	local INFO = TweenInfo.new(0.18, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	local player = Players.LocalPlayer
+	local toast = require(script:FindFirstAncestor("ModMenu"):WaitForChild("ToastManager"))
+	local state = false
+	
+	-- X-RAY: делаем все части мира прозрачными через LocalTransparencyModifier
+	-- (из референса T1Hub), кроме собственного персонажа.
+	local XRAY_ALPHA = 0.65
+	local original = {}
+	local descendantConn = nil
+	
+	local function isEligible(instance)
+		local char = player.Character
+		return instance:IsA("BasePart") and (not char or not instance:IsDescendantOf(char))
+	end
+	
+	local function makeTransparent(instance)
+		if isEligible(instance) and original[instance] == nil then
+			original[instance] = instance.LocalTransparencyModifier
+			instance.LocalTransparencyModifier = math.max(instance.LocalTransparencyModifier, XRAY_ALPHA)
+		end
+	end
+	
+	local function applyToAll()
+		for _, instance in workspace:GetDescendants() do
+			makeTransparent(instance)
+		end
+	end
+	
+	local function restore()
+		for instance, value in pairs(original) do
+			if instance and instance.Parent then
+				instance.LocalTransparencyModifier = value
+			end
+			original[instance] = nil
+		end
+	end
+	
+	local function apply()
+		TweenService:Create(button, INFO, { BackgroundColor3 = state and TRACK_ON or TRACK_OFF }):Play()
+		TweenService:Create(knob, INFO, { Position = state and ON_POS or OFF_POS, BackgroundColor3 = state and KNOB_ON or KNOB_OFF }):Play()
+	end
+	
+	button.Activated:Connect(function()
+		state = not state
+		apply()
+		if state then
+			applyToAll()
+			descendantConn = workspace.DescendantAdded:Connect(makeTransparent)
+		else
+			if descendantConn then
+				descendantConn:Disconnect()
+				descendantConn = nil
+			end
+			restore()
+		end
+		toast.show(state and "X-Ray Enabled" or "X-Ray Disabled")
+		print("[Switch] Xray toggled to", state)
+	end)
+	
+	-- После респавна reapply X-ray на новое окружение/персонажа
+	player.CharacterAdded:Connect(function()
+		task.wait(0.3)
+		if state then
+			applyToAll()
+		end
+	end)
+end;
+task.spawn(C_49);
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.ClickTeleport.Switch.SwitchAnim
+local function C_4f()
+local script = G2L["4f"];
+	-- LEMONADE_UI_SCALE_CONVERTER (managed by Lemonade, do not edit or remove)
+	-- Pixel (Offset) values in Lemonade UIs are authored for a 1920x1080 screen.
+	-- This multiplies every pixel value under the ScreenGuis this script sees by
+	-- the fit of that reference inside the current viewport, so phones and
+	-- tablets show the desktop layout scaled down instead of desktop-sized pixels.
+	-- Scale fractions already follow the screen and stay as they are.
+	local lemonadeUiScale_REFERENCE = Vector2.new(1920, 1080)
+	local lemonadeUiScale_ATTRIBUTE_PREFIX = "LemonadeUiScale_"
+	-- Roblox sizes its own PlayerGui ScreenGuis (touch controls, prompts, chat,
+	-- freecam) for the device already.
+	local lemonadeUiScale_ROBLOX_SCREEN_GUIS = {
+		TouchGui = true,
+		ProximityPrompts = true,
+		Chat = true,
+		BubbleChat = true,
+		Freecam = true,
+	}
+	local lemonadeUiScale_PIXEL_PROPERTIES = {
+		GuiObject = { "Size", "Position" },
+		TextLabel = { "TextSize" },
+		TextButton = { "TextSize" },
+		TextBox = { "TextSize" },
+		ImageLabel = { "TileSize" },
+		ImageButton = { "TileSize" },
+		ScrollingFrame = { "CanvasSize", "ScrollBarThickness" },
+		UIStroke = { "Thickness" },
+		UICorner = { "CornerRadius" },
+		UIPadding = { "PaddingLeft", "PaddingRight", "PaddingTop", "PaddingBottom" },
+		UIListLayout = { "Padding" },
+		UIPageLayout = { "Padding" },
+		UITableLayout = { "Padding" },
+		UIGridLayout = { "CellSize", "CellPadding" },
+		UISizeConstraint = { "MinSize", "MaxSize" },
+		UITextSizeConstraint = { "MinTextSize", "MaxTextSize" },
+	}
+	
+	local function lemonadeUiScale_factor(viewport: Vector2): number
+		return math.min(viewport.X / lemonadeUiScale_REFERENCE.X, viewport.Y / lemonadeUiScale_REFERENCE.Y)
+	end
+	
+	local function lemonadeUiScale_scaleValue(value: any, factor: number): any
+		local kind = typeof(value)
+		if kind == "UDim" then
+			return UDim.new(value.Scale, math.round(value.Offset * factor))
+		end
+		if kind == "UDim2" then
+			return UDim2.new(
+				value.X.Scale,
+				math.round(value.X.Offset * factor),
+				value.Y.Scale,
+				math.round(value.Y.Offset * factor)
+			)
+		end
+		return value * factor
+	end
+	
+	-- The authored value is kept as an attribute so repeat passes, clones and
+	-- viewport changes always scale from it and never compound or drift.
+	local function lemonadeUiScale_apply(instance: Instance, factor: number)
+		local target = instance :: any
+		for className, properties in lemonadeUiScale_PIXEL_PROPERTIES do
+			if not instance:IsA(className) then
+				continue
+			end
+			for _, property in properties do
+				local attribute = lemonadeUiScale_ATTRIBUTE_PREFIX .. property
+				local authored = instance:GetAttribute(attribute)
+				if authored == nil then
+					authored = target[property]
+					if lemonadeUiScale_scaleValue(authored, 2) == authored then
+						continue
+					end
+					instance:SetAttribute(attribute, authored)
+				end
+				target[property] = lemonadeUiScale_scaleValue(authored, factor)
+			end
+		end
+	end
+	
+	local function lemonadeUiScale_hasOwnScale(screenGui: ScreenGui): boolean
+		for _, descendant in screenGui:GetDescendants() do
+			if descendant:IsA("UIScale") and not descendant.Parent:IsA("GuiButton") then
+				return true
+			end
+		end
+		return false
+	end
+	
+	local function lemonadeUiScale_shouldScale(screenGui: ScreenGui): boolean
+		return not lemonadeUiScale_ROBLOX_SCREEN_GUIS[screenGui.Name] and not lemonadeUiScale_hasOwnScale(screenGui)
+	end
+	
+	local function lemonadeUiScale_convert(screenGui: ScreenGui, factor: number)
+		-- A UIScale is the tree's own responsiveness; scaling pixels as well
+		-- would shrink it twice.
+		if not lemonadeUiScale_shouldScale(screenGui) then
+			return
+		end
+		for _, descendant in screenGui:GetDescendants() do
+			lemonadeUiScale_apply(descendant, factor)
+		end
+	end
+	
+	local lemonadeUiScale_RunService = game:GetService("RunService")
+	if lemonadeUiScale_RunService:IsRunning() and lemonadeUiScale_RunService:IsClient() then
+		local playerGui = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
+		local camera = workspace.CurrentCamera
+		local managed: { [ScreenGui]: boolean } = setmetatable({}, { __mode = "k" }) :: any
+		local function currentFactor(): number
+			return lemonadeUiScale_factor(camera.ViewportSize)
+		end
+		playerGui.ChildAdded:Connect(function(child)
+			if not child:IsA("ScreenGui") then
+				return
+			end
+			task.defer(function()
+				lemonadeUiScale_RunService.RenderStepped:Wait()
+				if not lemonadeUiScale_shouldScale(child) then
+					return
+				end
+				managed[child] = true
+				lemonadeUiScale_convert(child, currentFactor())
+				-- Deferred so properties the builder sets right after parenting are
+				-- read as authored.
+				child.DescendantAdded:Connect(function(descendant)
+					task.defer(function()
+						if descendant:IsDescendantOf(child) then
+							lemonadeUiScale_apply(descendant, currentFactor())
+						end
+					end)
+				end)
+			end)
+		end)
+		camera:GetPropertyChangedSignal("ViewportSize"):Connect(function()
+			local factor = currentFactor()
+			for screenGui in managed do
+				lemonadeUiScale_convert(screenGui, factor)
+			end
+		end)
+	end
+	-- END LEMONADE_UI_SCALE_CONVERTER
+	
+	local TweenService = game:GetService("TweenService")
+	local RunService = game:GetService("RunService")
+	local Players = game:GetService("Players")
+	
+	local button = script.Parent
+	local knob = button:WaitForChild("Knob")
+	
+	local TRACK_OFF = Color3.fromRGB(55, 12, 12)
+	local TRACK_ON = Color3.fromRGB(12, 55, 15)
+	local KNOB_OFF = Color3.fromRGB(215, 40, 40)
+	local KNOB_ON = Color3.fromRGB(55, 200, 45)
+	local OFF_POS = UDim2.new(0, 10, 0.5, 0)
+	local ON_POS = UDim2.new(0, 24, 0.5, 0)
+	local INFO = TweenInfo.new(0.18, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	local player = Players.LocalPlayer
+	local toast = require(script:FindFirstAncestor("ModMenu"):WaitForChild("ToastManager"))
+	local state = false
+	
+	-- CLICK TELEPORT: клик мышью / тап по экрану телепортирует персонажа
+	-- в точку под курсором (из референса T1Hub). Клики по самому меню игнорируются.
+	local UserInputService = game:GetService("UserInputService")
+	local GuiService = game:GetService("GuiService")
+	local mainFrame = script:FindFirstAncestor("MainFrame")
+	
+	local function getCharacterRoot()
+		local character = player.Character
+		if not character or not character.Parent then
+			return nil, nil
+		end
+		local root = character:FindFirstChild("HumanoidRootPart")
+		if not root or not root:IsA("BasePart") then
+			return nil, nil
+		end
+		return character, root
+	end
+	
+	local function teleportToMouse(screenPosition)
+		local character, root = getCharacterRoot()
+		if not character or not root then
+			return
+		end
+	
+		local camera = workspace.CurrentCamera
+		if not camera then
+			return
+		end
+	
+		local inset = GuiService:GetGuiInset()
+		local ray = camera:ViewportPointToRay(screenPosition.X - inset.X, screenPosition.Y - inset.Y)
+		local raycastParams = RaycastParams.new()
+		raycastParams.FilterType = Enum.RaycastFilterType.Exclude
+		raycastParams.FilterDescendantsInstances = { character }
+		local result = workspace:Raycast(ray.Origin, ray.Direction * 2000, raycastParams)
+		if not result then
+			return
+		end
+	
+		local currentPivot = character:GetPivot()
+		local lift = math.max(root.Size.Y * 0.5, 2)
+		character:PivotTo(CFrame.new(result.Position + Vector3.new(0, lift, 0)) * currentPivot.Rotation)
+	end
+	
+	local function isInsideMenu(position)
+		if not mainFrame then
+			return false
+		end
+		local inset = GuiService:GetGuiInset()
+		local pos = mainFrame.AbsolutePosition + inset
+		local size = mainFrame.AbsoluteSize
+		return position.X >= pos.X
+			and position.X <= pos.X + size.X
+			and position.Y >= pos.Y
+			and position.Y <= pos.Y + size.Y
+	end
+	
+	local function apply()
+		TweenService:Create(button, INFO, { BackgroundColor3 = state and TRACK_ON or TRACK_OFF }):Play()
+		TweenService:Create(knob, INFO, { Position = state and ON_POS or OFF_POS, BackgroundColor3 = state and KNOB_ON or KNOB_OFF }):Play()
+	end
+	
+	UserInputService.InputBegan:Connect(function(input)
+		if not state then
+			return
+		end
+	
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			local mouseLocation = UserInputService:GetMouseLocation()
+			if isInsideMenu(mouseLocation) then
+				return
+			end
+			teleportToMouse(mouseLocation)
+		elseif input.UserInputType == Enum.UserInputType.Touch then
+			if isInsideMenu(input.Position) then
+				return
+			end
+			teleportToMouse(input.Position)
+		end
+	end)
+	
+	button.Activated:Connect(function()
+		state = not state
+		apply()
+		toast.show(state and "Click Teleport Enabled" or "Click Teleport Disabled")
+		print("[Switch] ClickTeleport toggled to", state)
+	end)
+end;
+task.spawn(C_4f);
+-- ServerStorage.ModMenu.MainFrame.ScrollingFrame.LockFov.Switch.SwitchAnim
+local function C_55()
+local script = G2L["55"];
+	-- LEMONADE_UI_SCALE_CONVERTER (managed by Lemonade, do not edit or remove)
+	-- Pixel (Offset) values in Lemonade UIs are authored for a 1920x1080 screen.
+	-- This multiplies every pixel value under the ScreenGuis this script sees by
+	-- the fit of that reference inside the current viewport, so phones and
+	-- tablets show the desktop layout scaled down instead of desktop-sized pixels.
+	-- Scale fractions already follow the screen and stay as they are.
+	local lemonadeUiScale_REFERENCE = Vector2.new(1920, 1080)
+	local lemonadeUiScale_ATTRIBUTE_PREFIX = "LemonadeUiScale_"
+	-- Roblox sizes its own PlayerGui ScreenGuis (touch controls, prompts, chat,
+	-- freecam) for the device already.
+	local lemonadeUiScale_ROBLOX_SCREEN_GUIS = {
+		TouchGui = true,
+		ProximityPrompts = true,
+		Chat = true,
+		BubbleChat = true,
+		Freecam = true,
+	}
+	local lemonadeUiScale_PIXEL_PROPERTIES = {
+		GuiObject = { "Size", "Position" },
+		TextLabel = { "TextSize" },
+		TextButton = { "TextSize" },
+		TextBox = { "TextSize" },
+		ImageLabel = { "TileSize" },
+		ImageButton = { "TileSize" },
+		ScrollingFrame = { "CanvasSize", "ScrollBarThickness" },
+		UIStroke = { "Thickness" },
+		UICorner = { "CornerRadius" },
+		UIPadding = { "PaddingLeft", "PaddingRight", "PaddingTop", "PaddingBottom" },
+		UIListLayout = { "Padding" },
+		UIPageLayout = { "Padding" },
+		UITableLayout = { "Padding" },
+		UIGridLayout = { "CellSize", "CellPadding" },
+		UISizeConstraint = { "MinSize", "MaxSize" },
+		UITextSizeConstraint = { "MinTextSize", "MaxTextSize" },
+	}
+	
+	local function lemonadeUiScale_factor(viewport: Vector2): number
+		return math.min(viewport.X / lemonadeUiScale_REFERENCE.X, viewport.Y / lemonadeUiScale_REFERENCE.Y)
+	end
+	
+	local function lemonadeUiScale_scaleValue(value: any, factor: number): any
+		local kind = typeof(value)
+		if kind == "UDim" then
+			return UDim.new(value.Scale, math.round(value.Offset * factor))
+		end
+		if kind == "UDim2" then
+			return UDim2.new(
+				value.X.Scale,
+				math.round(value.X.Offset * factor),
+				value.Y.Scale,
+				math.round(value.Y.Offset * factor)
+			)
+		end
+		return value * factor
+	end
+	
+	-- The authored value is kept as an attribute so repeat passes, clones and
+	-- viewport changes always scale from it and never compound or drift.
+	local function lemonadeUiScale_apply(instance: Instance, factor: number)
+		local target = instance :: any
+		for className, properties in lemonadeUiScale_PIXEL_PROPERTIES do
+			if not instance:IsA(className) then
+				continue
+			end
+			for _, property in properties do
+				local attribute = lemonadeUiScale_ATTRIBUTE_PREFIX .. property
+				local authored = instance:GetAttribute(attribute)
+				if authored == nil then
+					authored = target[property]
+					if lemonadeUiScale_scaleValue(authored, 2) == authored then
+						continue
+					end
+					instance:SetAttribute(attribute, authored)
+				end
+				target[property] = lemonadeUiScale_scaleValue(authored, factor)
+			end
+		end
+	end
+	
+	local function lemonadeUiScale_hasOwnScale(screenGui: ScreenGui): boolean
+		for _, descendant in screenGui:GetDescendants() do
+			if descendant:IsA("UIScale") and not descendant.Parent:IsA("GuiButton") then
+				return true
+			end
+		end
+		return false
+	end
+	
+	local function lemonadeUiScale_shouldScale(screenGui: ScreenGui): boolean
+		return not lemonadeUiScale_ROBLOX_SCREEN_GUIS[screenGui.Name] and not lemonadeUiScale_hasOwnScale(screenGui)
+	end
+	
+	local function lemonadeUiScale_convert(screenGui: ScreenGui, factor: number)
+		-- A UIScale is the tree's own responsiveness; scaling pixels as well
+		-- would shrink it twice.
+		if not lemonadeUiScale_shouldScale(screenGui) then
+			return
+		end
+		for _, descendant in screenGui:GetDescendants() do
+			lemonadeUiScale_apply(descendant, factor)
+		end
+	end
+	
+	local lemonadeUiScale_RunService = game:GetService("RunService")
+	if lemonadeUiScale_RunService:IsRunning() and lemonadeUiScale_RunService:IsClient() then
+		local playerGui = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
+		local camera = workspace.CurrentCamera
+		local managed: { [ScreenGui]: boolean } = setmetatable({}, { __mode = "k" }) :: any
+		local function currentFactor(): number
+			return lemonadeUiScale_factor(camera.ViewportSize)
+		end
+		playerGui.ChildAdded:Connect(function(child)
+			if not child:IsA("ScreenGui") then
+				return
+			end
+			task.defer(function()
+				lemonadeUiScale_RunService.RenderStepped:Wait()
+				if not lemonadeUiScale_shouldScale(child) then
+					return
+				end
+				managed[child] = true
+				lemonadeUiScale_convert(child, currentFactor())
+				-- Deferred so properties the builder sets right after parenting are
+				-- read as authored.
+				child.DescendantAdded:Connect(function(descendant)
+					task.defer(function()
+						if descendant:IsDescendantOf(child) then
+							lemonadeUiScale_apply(descendant, currentFactor())
+						end
+					end)
+				end)
+			end)
+		end)
+		camera:GetPropertyChangedSignal("ViewportSize"):Connect(function()
+			local factor = currentFactor()
+			for screenGui in managed do
+				lemonadeUiScale_convert(screenGui, factor)
+			end
+		end)
+	end
+	-- END LEMONADE_UI_SCALE_CONVERTER
+	
+	local TweenService = game:GetService("TweenService")
+	local RunService = game:GetService("RunService")
+	local Players = game:GetService("Players")
+	
+	local button = script.Parent
+	local knob = button:WaitForChild("Knob")
+	
+	local TRACK_OFF = Color3.fromRGB(55, 12, 12)
+	local TRACK_ON = Color3.fromRGB(12, 55, 15)
+	local KNOB_OFF = Color3.fromRGB(215, 40, 40)
+	local KNOB_ON = Color3.fromRGB(55, 200, 45)
+	local OFF_POS = UDim2.new(0, 10, 0.5, 0)
+	local ON_POS = UDim2.new(0, 24, 0.5, 0)
+	local INFO = TweenInfo.new(0.18, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	local player = Players.LocalPlayer
+	local toast = require(script:FindFirstAncestor("ModMenu"):WaitForChild("ToastManager"))
+	local state = false
+	
+	-- LOCK FOV: при включении камера закрепляется в той точке, где находилась
+	-- в момент нажатия тумблера, и остаётся там неподвижно, пока игрок ходит.
+	local RunService = game:GetService("RunService")
+	
+	local savedCameraType = nil
+	
+	local function startLock()
+		local camera = workspace.CurrentCamera
+		if not camera then
+			return
+		end
+		if savedCameraType == nil then
+			savedCameraType = camera.CameraType
+		end
+		-- запоминаем текущее положение камеры и фиксируем его
+		local frozenCFrame = camera.CFrame
+		camera.CameraType = Enum.CameraType.Scriptable
+		camera.CFrame = frozenCFrame
+		RunService:BindToRenderStep("LockFovCamera", Enum.RenderPriority.Camera.Value + 1, function()
+			local cam = workspace.CurrentCamera
+			if cam then
+				cam.CFrame = frozenCFrame
+			end
+		end)
+	end
+	
+	local function stopLock()
+		RunService:UnbindFromRenderStep("LockFovCamera")
+		local camera = workspace.CurrentCamera
+		if camera and savedCameraType ~= nil then
+			camera.CameraType = savedCameraType
+		end
+		savedCameraType = nil
+	end
+	
+	local function apply()
+		TweenService:Create(button, INFO, { BackgroundColor3 = state and TRACK_ON or TRACK_OFF }):Play()
+		TweenService:Create(knob, INFO, { Position = state and ON_POS or OFF_POS, BackgroundColor3 = state and KNOB_ON or KNOB_OFF }):Play()
+	end
+	
+	button.Activated:Connect(function()
+		state = not state
+		apply()
+		if state then
+			startLock()
+		else
+			stopLock()
+		end
+		toast.show(state and "Lock FOV Enabled" or "Lock FOV Disabled")
+		print("[Switch] LockFov toggled to", state)
+	end)
+	
+	-- После респавна камера закрепляется заново на новом персонаже
+	player.CharacterAdded:Connect(function()
+		task.wait(0.3)
+		if state then
+			startLock()
+		end
+	end)
+end;
+task.spawn(C_55);
+-- ServerStorage.ModMenu.MainFrame.FullHide.CloseScript
+local function C_5c()
+local script = G2L["5c"];
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.Parent.ModMenu:Destroy()
 	end)
 end;
-task.spawn(C_24);
--- StarterGui.ModMenu.MainFrame.DragScript
-local function C_25()
-local script = G2L["25"];
-	--Not made by me, check out this video: https://www.youtube.com/watch?v=z25nyNBG7Js&t=22s
-	--Put this inside of your Frame and configure the speed if you would like.
-	--Enjoy! Credits go to: https://www.youtube.com/watch?v=z25nyNBG7Js&t=22s
-	
-	local UIS = game:GetService('UserInputService')
-	local TweenService = game:GetService('TweenService')
-	local frame = script.Parent
-	local dragBar = frame:WaitForChild('TextLabel')
-	local dragToggle = nil
-	local dragSpeed = 0
-	local dragStart = nil
-	local startPos = nil
-	
-	local function updateInput(input)
-		local delta = input.Position - dragStart
-		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
-			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-		TweenService:Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
-	end
-	
-	dragBar.InputBegan:Connect(function(input)
-		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
-			dragToggle = true
-			dragStart = input.Position
-			startPos = frame.Position
-			input.Changed:Connect(function()
-				if input.UserInputState == Enum.UserInputState.End then
-					dragToggle = false
-				end
-			end)
-		end
-	end)
-	
-	UIS.InputChanged:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-			if dragToggle then
-				updateInput(input)
-			end
-		end
-	end)
-	
-end;
-task.spawn(C_25);
--- StarterGui.ModMenu.OpenCloseButton.DragScript
-local function C_27()
-local script = G2L["27"];
+task.spawn(C_5c);
+-- ServerStorage.ModMenu.OpenCloseButton.DragScript
+local function C_5e()
+local script = G2L["5e"];
 	--Not made by me, check out this video: https://www.youtube.com/watch?v=z25nyNBG7Js&t=22s
 	--Put this inside of your Frame and configure the speed if you would like.
 	--Enjoy! Credits go to: https://www.youtube.com/watch?v=z25nyNBG7Js&t=22s
@@ -1672,6 +4605,6 @@ local script = G2L["27"];
 	end)
 	
 end;
-task.spawn(C_27);
+task.spawn(C_5e);
 
 return G2L["1"], require;
